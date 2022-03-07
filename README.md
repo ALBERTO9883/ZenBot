@@ -53,8 +53,8 @@ ALBERTO ![preview](https://user-images.githubusercontent.com/100887441/156953527
 `The Zen-O-Bot ___ By Alberto Acosta` 
 ```
 ### `COORDINADORES`
->Lil Fabi Kpo
->Makey
->Pablito tenía un pelito
+Estos Son los Sub Creadores del bot
 ```bash
->
+>LIL FABI KPO
+>MAKEY
+>PABLITO TENIA UN PELITO

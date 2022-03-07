@@ -47,7 +47,8 @@ de esa cantidad el Bot empieza a ir
 excesivamente lento (depende del WhatsApp igual)
 ```
 ## `EDITOR Y PORPIETARIO DEL BOT` 
-[![ALBERTO](https://avatars.githubusercontent.com/u/90165013?s=400&u=946f5c00c527c7e6fa2ef5148c6ad56270bb600e&v=4size=100)](https://avatars.githubusercontent.com/u/90165013?s=400&u=cdf7fd989e2a787c9f400545147865615c336002&v=4) 
+[![ALBERTO] ![preview](https://user-images.githubusercontent.com/100887441/156953527-740d110d-3ee5-41e5-9899-fd4d4b248d43.gif)
+
 ```bash
 `The Zen-O-Bot ___ By Alberto Acosta` 
 ```

@@ -15,7 +15,7 @@ let handler = async (m, { conn, usedPrefix }) => {
     let { min, xp, max } = levelling.xpRange(level, global.multiplier)
     let username = conn.getName(who)
     let str = `
-*_ミ💖 Hola ${username} 💖彡_*
+*_🀄 Hola ${username} 🀄彡_*
 
 ㅤㅤ *🗳️<CAJA FUERTE/>🔐*
 - Aquí puede guardar mensajes que quieras ver mas tarde

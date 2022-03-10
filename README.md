@@ -58,3 +58,4 @@ Estos Son los Sub Creadores del bot
 >LIL FABI KPO
 >MAKEY
 >PABLITO TENIA UN PELITO
+>VALDILLO

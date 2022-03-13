@@ -27,7 +27,6 @@ let text = `
           ℹ️️ *✥  _MENÚS_  ✥* ℹ️️
 ━━━━━━━━━━━━━━
 *⚡⃟➥ _${usedPrefix}menu_ 𖤍*
-*⚡⃟➥ _${usedPrefix}menusimple_ 𖤍*
 *⚡⃟➥ _${usedPrefix}menuaudios_ 𖤍*
 *⚡⃟➥ _${usedPrefix}menuowner_ 𖤍*
 *⚡⃟➥ _${usedPrefix}audiosrandom_ 𖤍*

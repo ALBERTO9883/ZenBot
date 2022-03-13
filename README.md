@@ -52,7 +52,7 @@ ALBERTO ![preview](https://user-images.githubusercontent.com/100887441/156953527
 ```bash
 `The Zen-O-Bot ___ By Alberto Acosta` 
 ```
-### `COORDINADORES`
+### `MODERADORES`
 Estos Son los Sub Creadores del bot
 ```bash
 >LIL FABI KPO

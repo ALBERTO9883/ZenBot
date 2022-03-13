@@ -9,7 +9,7 @@ if (!vid) throw '*Video/Audio No encontrado* '
 let isVideo = /2$/.test(command)
 let { dl_link, thumb, title, filesize, filesizeF} = await (isVideo ? ytv : yta)(vid.url, 'id4')
 conn.sendFile(m.chat, thumb, 'thumbnail.jpg', `
-*⏯ ️Reproductor By Shadow Brokers - Bot ⏯️*
+*©Cᴏᴍᴘᴀɴʏ Zᴇɴ-O-Bᴏᴛ*
 
 *${title}*
 *⇄ㅤ     ◁   ㅤ  ❚❚ㅤ     ▷ㅤ     ↻*

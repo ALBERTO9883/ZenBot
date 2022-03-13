@@ -46,7 +46,7 @@ el comando #actualizar para que se actualicen los datos
 de esa cantidad el Bot empieza a ir 
 excesivamente lento (depende del WhatsApp igual)
 ```
-## `EDITOR Y PORPIETARIO DEL BOT` 
+## `EDITOR Y PROPIETARIO DEL BOT` 
 ALBERTO ![preview](https://user-images.githubusercontent.com/100887441/156953527-740d110d-3ee5-41e5-9899-fd4d4b248d43.gif)
 
 ```bash

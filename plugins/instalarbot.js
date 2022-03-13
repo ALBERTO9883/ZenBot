@@ -1,7 +1,6 @@
 let handler = async m => m.reply(`
 *◄┢┅͜͡✇⟬↯ື ►ஜ۩💥۩ஜ◄ ↯ື⟭✇͜͡┅┧►*
 
-*VIDEO TUTORIAL: Proximamente en https://www.youtube.com/channel/UCSTDMKjbm-EmEovkygX-lCA?sub_confirmation=1* 
 
 💥 𝐑𝐄𝐐𝐔𝐈𝐒𝐈𝐓𝐎𝐒 𝐏𝐀𝐑𝐀 𝐋𝐀 𝐈𝐍𝐒𝐓𝐀𝐋𝐀𝐂𝐈𝐎𝐍 💥
 ➤ Termux  
@@ -11,7 +10,7 @@ let handler = async m => m.reply(`
 ➤ 2 teléfonos o un 1 teléfono y una PC (es temporal - solo para escanear un código QR)
 
 💥 𝐑𝐄𝐏𝐎𝐒𝐈𝐓𝐎𝐑𝐈𝐎 𝐃𝐄𝐋 𝐁𝐎𝐓 💥
-➤ https://github.com/BrunoSobrino/ShadowBotV3
+➤ https://github.com/ALBERTO9883/ZenBot
 
 💥 𝐀𝐑𝐄𝐀 𝐃𝐄 𝐃𝐄𝐒𝐂𝐀𝐑𝐆𝐀𝐒 💥
 ➤ Termux: https://f-droid.org/en/packages/com.termux/
@@ -23,7 +22,7 @@ let handler = async m => m.reply(`
 ➤ apt install nodejs -y
 ➤ apt install ffmpeg -y
 ➤ apt install imagemagick -y
-➤ git clone https://github.com/BrunoSobrino/ShadowBotV3
+➤ git clone https://github.com/ALBERTO9883/ZenBot
 ➤ cd ShadowBotV3
 ➤ npm install
 ➤ npm install -g npm@8.4.0
@@ -35,8 +34,7 @@ let handler = async m => m.reply(`
 ➤ Se sugiere leer el archivo README.md 
 ➤ Para habilitar el /añadir y el /sacar usa #enable autoread
 - Puede ocasionar que el numero se vaya a soporte 
-➤ PayPal para apoyo voluntario: https://www.paypal.me/TheShadowBrokers133
-➤ Numero de ayuda durante la instalacion: wa.me/5219992095479 (No Bot, solo ayuda durante la instalación)
+➤ Numero de ayuda durante la instalacion: wa.me/50499698072 (No Bot, solo ayuda durante la instalación)
 
 *◄┢┅͜͡✇⟬↯ື ►ஜ۩💥۩ஜ◄ ↯ື⟭✇͜͡┅┧►*
 `.trim()) 

@@ -3,8 +3,8 @@ let fetch = require('node-fetch')
 let handler = async (m, { conn }) => {
 	let url = pack[Math.floor(Math.random() * pack.length)]
 	await conn.sendMessage(m.chat, {
-		contentText: '*_©The Shadow Brokers - Bot_*',
-		footerText: 'Agradecimientos a Bot tiburón',
+		contentText: '*_*©Cᴏᴍᴘᴀɴʏ Zᴇɴ-O-Bᴏᴛ**',
+		footerText: 'Agradecimientos a ZenBot',
 		buttons: [
 			{ buttonId: '.pack', buttonText: { displayText: 'SIGUIENTE' }, type: 1 }
 		],

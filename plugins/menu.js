@@ -1,11 +1,5 @@
 //Codigo by ZenBot
-let os = require('os')
-let util = require('util')
-let fs = require('fs')
-let { performance } = require('perf_hooks')
-let moment = require('moment-timezone')
 let fetch = require('node-fetch')
-let path = require('path')
 let handler = async (m, { conn, usedPrefix }) => {
 let who = m.sender
 let pp = await(await fetch('https://imgur.com/O1J4KJ7.jpg')).buffer()

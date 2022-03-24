@@ -278,7 +278,7 @@ conn.reply(m.chat, text, m, { thumbnail: kai, contextInfo: {
 mentionedJid: [who],
 externalAdReply: {
 title: '©Cᴏᴍᴘᴀɴʏ Zᴇɴ-O-Bᴏᴛ',
-body: 'Bʏ Aʟʙᴇʀᴛᴏ',
+body: 'Aʟʙᴇʀᴛᴏ Y Asʜʟʏ🌹',
 thumbnail: pp
 }}})}
 handler.command = /^(menu|menú|memu|memú|help|info|comandos|allmenu|2help|menu1.2|ayuda|commands|commandos)$/i

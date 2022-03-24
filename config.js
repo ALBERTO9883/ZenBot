@@ -54,11 +54,11 @@ global.APIKeys = { // APIKey Here
 }
 
 // Sticker WM
-global.packname = 'Zen'
-global.author = '©Company Zen - Bot'
+global.packname = 'ZenBot'
+global.author = 'Aʟʙᴇʀᴛᴏ Y Asʜʟʏ🌹'
 
 
-global.wm = '©The Zen-O-Bot'
+global.wm = 'Aʟʙᴇʀᴛᴏ Y Asʜʟʏ🌹'
 global.wait = '*Espere un momento..*'
 
 

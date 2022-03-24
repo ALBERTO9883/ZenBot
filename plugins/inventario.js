@@ -75,7 +75,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     let usersuncommon = sorteduncommon.map(v => v[0])
     let usersmythic = sortedmythic.map(v => v[0])
     let userslegendary = sortedlegendary.map(v => v[0])
-    let invt = fs.readFileSync('./src/image/inventario.png')
+    let invt = fs.readFileSync('./src/inventario.png')
     let str = `
 Inventario de @${m.sender.split("@s.whatsapp.net")[0]}
 

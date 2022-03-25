@@ -179,7 +179,7 @@ module.exports = {
         } else global.DATABASE._data.chats[m.chat] = {
           isBanned: false,
           welcome: true, 
-          detect: true,
+          detect: false,
           sWelcome: "",
           sBye: '',
           sPromote: '',

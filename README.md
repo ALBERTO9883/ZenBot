@@ -1,4 +1,4 @@
-# **🔥𝗧𝗵𝗲 Zen-O-Bot🔥**
+# ***🔥𝗧𝗵𝗲 Zen-O-Bot🔥***
 ### `Si necesitas ayuda mandame mensaje :^`
 <a href="http://wa.me/50499698072" target="blank"><img src="https://img.shields.io/badge/Whatsapp-30302f?style=flat&logo=whatsapp" /></a>
 ### `Unete a los grupos oficales para conocer novedades del Bot`

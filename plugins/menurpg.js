@@ -1,3 +1,8 @@
+//NO MODIFIQUES EL NÚMERO DEL CREADOR NI EL NOMBRE.. SOLO AGREGA LA INFORMACIÓN QUE TU QUIERAS O EDITALO A TU MANERA PERO DEJANDO LOS CREDITOS <3 
+//PUEDES AGREGAR OTRA FILAS DE PAYPAL, GRUPOS, PERO DEJA ALGUNOS CREDITOS, YA QUE ES LA UNICA MANERA DE INGRESOS DEL BOT
+//SI VAS A MODIFICAR TODO Y HACER PASAR COMO SI FUERA TU BOT (CREADO POR TI) SOLO TE PIDO QUE SI ESTA EN TUS POSIBILIDADES DONES UN POCO
+//LLEVO AL REDEDOR DE 1 AÑO Y MEDIO EN LA ELABORACION DE ESTE BOT, SI TU LO EDITAS EN UNA SEMANA NO ERES TU EL CREADOR, SI LO EDITAS TOTALMENTE A TU MANERA SERIA UTULIZADO MI BOT COMO BASE Y AHI SI LO SERIAS  
+
 let fs = require('fs')
 let fetch = require('node-fetch')
 let moment = require('moment-timezone')
@@ -26,16 +31,16 @@ let menu =`
 ┋➥ ❖⃟🏹 _${usedPrefix}shop_
 ┋➥ ❖⃟⚔ _${usedPrefix}transferir_
 ┋➥ ❖⃟🏹 _${usedPrefix}use_
-┋➥ ❖⃟⚔ _${usedPrefix}weekly
+┋➥ ❖⃟⚔ _${usedPrefix}weekly_
 ┗━━━━━━━━━━━━━┛`.trim()
 let mentionedJid = [who]
-conn.send3ButtonImg(m.chat, pp, menu, '*©Cᴏᴍᴘᴀɴʏ Zᴇɴ Bᴏᴛ*', ` '𝙶𝚁𝚄𝙿𝙾𝚂 𝙾𝙵𝙸𝙲𝙸𝙰𝙻𝙴𝚂', `#grupos`, m, false, { contextInfo: { mentionedJid }})   
+conn.send3ButtonImg(m.chat, pp, menu, '*©Cᴏᴍᴘᴀɴʏ Zᴇɴ Bᴏᴛ*', 'MENU', `#menu`, 'MENU AUDIOS', `#audiosrandom`, '𝙶𝚁𝚄𝙿𝙾𝚂 𝙾𝙵𝙸𝙲𝙸𝙰𝙻𝙴𝚂', `#grupos`, m, false, { contextInfo: { mentionedJid }})   
 //await await await await await await conn.sendFile(m.chat, vn, 'mariana.mp3', null, m, true, {
 //type: 'audioMessage', 
 //ptt: true 
 //})
 }
-handler.command = /^(|menurpg|rpgmenu|MENURPG)$/i
+handler.command = /^(menurpg|rpgmenu)$/i
 handler.fail = null
 handler.rowner=true
 module.exports = handler

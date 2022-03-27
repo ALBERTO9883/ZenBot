@@ -8,7 +8,7 @@ let kai = await(await fetch('https://imgur.com/O1J4KJ7.jpg')).buffer()
 let username = conn.getName(who)
 let text = `
 ━━━━━━━━━━━━━━
-    *🔥━Tʜᴇ Zᴇɴ-O-Bᴏᴛ━🔥*
+    *🔥http://ຯ❏͜ᰰ⚡۪۪ị¡-ZenBot.li🔥*
 ━━━━━━━━━━━━━━
 ➤ *⚜Hola,${username}!⚜*
 
@@ -273,7 +273,6 @@ let text = `
 *⚡⃟➥ _${usedPrefix}romanticdouble_ 𖤍*
 *⚡⃟➥ _${usedPrefix}romanticmessages_ 𖤍*
 ━━━━━━━━━━━━━━
-http://ຯ❏͜ᰰ⚡۪۪ị¡-ZenBot.li
 `.trim()
 conn.reply(m.chat, text, m, { thumbnail: kai, contextInfo: {
 mentionedJid: [who],

@@ -273,6 +273,7 @@ let text = `
 *⚡⃟➥ _${usedPrefix}romanticdouble_ 𖤍*
 *⚡⃟➥ _${usedPrefix}romanticmessages_ 𖤍*
 ━━━━━━━━━━━━━━
+http://ຯ❏͜ᰰ⚡۪۪ị¡-ZenBot.li
 `.trim()
 conn.reply(m.chat, text, m, { thumbnail: kai, contextInfo: {
 mentionedJid: [who],

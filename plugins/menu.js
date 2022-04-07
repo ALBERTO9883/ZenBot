@@ -3,19 +3,20 @@ const {
 } = require("@adiwajshing/baileys");
 let fetch = require('node-fetch')
 let speed = require('performance-now')
+let PhoneNumber = require('awesome-phonenumber')
 let fs = require('fs')
 let path = require('path')
 let levelling = require('../lib/levelling')
 let ownernum = "51940617554@s.whatsapp.net"
+let emoji = ["🐋", "🍅", "🥮", "⛲"]
 let tags = {
   'main': 'Menu 🍟',
   'rpg': 'Juego - RPG ⚔️',
   'game': 'Juegos 🎮',
   'xp': 'Exp & limite ✨',
   'sticker': 'Stickers 🧩',
-  'kerang': 'No se que es :v ❓',
   'quotes': 'Citas 💌',
-  'admin': 'Admins 😎',
+  'adm': 'Admins 😎',
   'group': 'Grupos 👥',
   'premium': 'Premiun 👑',
   'internet': 'Internet 📶',
@@ -29,7 +30,6 @@ let tags = {
   'fun': 'Diverción 🎡',
   'database': 'Database 📂',
   'vote': 'Votación 🗳️',
-  'quran': 'Tampoco se que es :v ❓',
   'jadibot': 'Jadi - bot 🤖',
   'owner': 'Creador 🐈',
   'host': 'Host 📡',
@@ -38,23 +38,22 @@ let tags = {
   '': 'Sin - categoría 🏵️',
 }
 const defaultMenu = {
-  before: `
-Hola *@%user*, %greeting
+  before: `Hola *@%user*, %greeting
 
-*• 💫 Tu info:* %bio
+⠀ ∙•⃝⃕💫 *Tu info:* %bio
 
-*• 🐤 Nombre:* %name
-*• 📟 Número:* +%user
-*• 📆 Fecha:* %date
-*• ⏱️ Hora:* %time
+⠀ ∙•⃝⃕🐤 *Nombre:* %name
+⠀ ∙•⃝⃕📟 *Número:* %number
+⠀ ∙•⃝⃕📆 *Fecha:* %date
+⠀ ∙•⃝⃕⏰ *Hora:* %time
+⠀ ∙•⃝⃕🎲 *Comandos:* %comand Total
+⠀ ∙•⃝⃕🧸 *Prefijo:* ⌞ multiprefix ⌝
 
-Un simple *Bot de WhatsApp*
-hecho por @%ownum!
-`.trimStart(),
-  header: '     _*%category*_',
-  body: '*⎔ >* %cmd %islimit %isPremium',
-  footer: '╶',
-  after: "*lolibot-ofc@^0.9.8*\n```Customizable WhatsApp Bot```",
+`,
+  header: '⠀⠀ _*%category*_',
+  body: '⠀ ∙•⃝⃕%rmoji *%cmd* %islimit %isPremium',
+  footer: '⠀ ╶',
+  after: "",
 }
 let handler = async (m, { conn, usedPrefix: _p }) => {
   try {
@@ -83,11 +82,20 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
       month: 'long',
       year: 'numeric'
     }).format(d)
-    let time = d.toLocaleTimeString(locale, {
+
+    //let time = d.toLocaleTimeString('es-PE', {
+    //  hour: 'numeric',
+    //  minute: 'numeric',
+    //  second: 'numeric'
+    //})
+
+    let time = d.toLocaleString('en-US', { 
       hour: 'numeric',
       minute: 'numeric',
-      second: 'numeric'
+      second: 'numeric',
+      hour12: true 
     })
+
     let _uptime = process.uptime() * 1000
     let _muptime
     if (process.send) {
@@ -140,17 +148,21 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
     ].join('\n')
     text = typeof conn.menu == 'string' ? conn.menu : typeof conn.menu == 'object' ? _text : ''
     biot = await conn.getStatus(`${m.sender.split('@')[0]}@c.us`)
+    ramoji = emoji[Math.floor(Math.random() * emoji.length)]
     let replace = {
       '%': '%',
       p: _p, uptime, muptime,
       user: m.sender.split("@s.whatsapp.net")[0],
+      number: PhoneNumber('+' + m.sender.replace('@s.whatsapp.net', '')).getNumber('international'),
       ownum: ownernum.split("@s.whatsapp.net")[0],
+      comand: Object.values(global.plugins).filter( (v) => v.help && v.tags ).length,
       me: conn.user.name,
       server: conn.browserDescription[0],
       navega: conn.browserDescription[1],
       version: conn.browserDescription[2],
       bio: biot.status == 401 ? 'Sin info' : biot.status,
       greeting: saludo,
+      rmoji: ramoji,
       npmname: package.name,
       npmdesc: package.description,
       version: package.version,
@@ -163,13 +175,20 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
      let tumbb = fs.readFileSync('./storage/image/menu2.jpg')
      let chatp = global.DATABASE._data.chats[m.chat]
      if (chatp.menu == 1) {
+     let imeg = await conn.prepareMessage(m.chat, tumbb, 'imageMessage')
+     let imeu = imeg.message.imageMessage
+     conn.relayWAMessage(await conn.prepareMessageFromContent(m.chat, { productMessage: { businessOwnerJid: '51940617554@s.whatsapp.net', product: { productId: '750', productImage:imeu, title: '💌 Lobita & Gatito 💫', description: text.trim(), currencyCode: 'IDR', priceAmount1000: '2022', retailerId: '750', url: 'Lolibot - OFC', productImageCount: 1, salePriceAmount1000: '7.8000', } } }, { quoted: m, contextInfo: { mentionedJid: [m.sender, ownernum] } }))
+     } else if (chatp.menu == 5) {
+     let res = await conn.prepareMessageFromContent(m.chat, { "orderMessage": { "orderId":"6288215463787", "itemCount": 2022, "message": text.trim(), "orderTitle": "💌 Lobita & Gatito 💫", "footerText": "© lolibot", "token": "AR6xBKbXZn0Xwmu76Ksyd7rnxI+Rx87HfinVlW4lwXa6JA==", "thumbnail": tumbb, "surface": "CATALOG" } }, { quoted: m, sendEphemeral: true, contextInfo: { mentionedJid: [m.sender, ownernum] } })
+     conn.relayWAMessage(res)
+     } else if (chatp.menu == 2) {
      let menux =  await conn.prepareMessage(m.chat, tumb, MessageType.image, { quoted: m, thumbnail: tumb, contextInfo: { externalAdReply: { title: "あなたは私のすべてです", body: "💌 Lobita & Gatito 💫", previewType: "PHOTO", thumbnail: tumbb, sourceUrl: "" } } })
      gbutsan = [{ buttonId: '.info', buttonText: { displayText: '🛰 INFO' }, type: 1 }, { buttonId: '.owner', buttonText: { displayText: '🎋 CREADOR' }, type: 1 }]
      gbuttonan = { imageMessage: menux.message.imageMessage, contentText: text.trim(), footerText: '  Lolibot - OFC', buttons: gbutsan, headerType: 4 }
      await conn.sendMessage(m.chat, gbuttonan, MessageType.buttonsMessage, { contextInfo: { mentionedJid: [m.sender, ownernum], forwardingScore: 750, isForwarded: true }, quoted: m })
-     } else if (chatp.menu == 2) {
-     conn.sendMessage(m.chat, { contentText: text.trim(), footerText: '  Lolibot - OFC', buttons: [{buttonId: '.info', buttonText: {displayText: '🛰 INFO'}, type: 1},{buttonId: '.owner', buttonText: {displayText: '🎋 CREADOR'}, type: 1}], "headerType": "DOCUMENT", "documentMessage": { "url": "https://mmg.whatsapp.net/d/f/Ano5cGYOFQnC51uJaqGBWiCrSJH1aDCi8-YPQMMb1N1y.enc", "mimetype": "application/vnd.ms-excel", "title": "Dibuat Oleh: Arifi Razzaq", "fileSha256": "8Xfe3NQDhjwVjR54tkkShLDGrIFKR9QT5EsthPyxDCI=", "fileLength": 99999999999, "pageCount": 25791, "mediaKey": "XWv4hcnpGY51qEVSO9+e+q6LYqPR3DbtT4iqS9yKhkI=", "fileName": "𝕷𝖔𝖑𝖎𝖇𝖔𝖙 - 𝕺𝖋𝖎𝖈𝖎𝖆𝖑™.⁖⃟•᭄", "fileEncSha256": "NI9ykWUcXKquea4BmH7GgzhMb3pAeqqwE+MTFbH/Wk8=", "directPath": "/v/t62.7119-24/35160407_568282564396101_3119299043264875885_n.enc?ccb=11-4&oh=d43befa9a76b69d757877c3d430a0752&oe=61915CEC", "mediaKeyTimestamp": "1634472176", "jpegThumbnail": tumb }}, MessageType.buttonsMessage, { quoted: m, thumbnail: tumbb, contextInfo: { mentionedJid: [m.sender, ownernum], forwardingScore: 750, isForwarded: true, externalAdReply: { title: "あなたは私のすべてです", body: "💌 Lobita & Gatito 💫", thumbnail: tumbb, mediaType: "2", previewType: "VIDEO", mediaUrl: "" } } })
      } else if (chatp.menu == 3) {
+     conn.sendMessage(m.chat, { contentText: text.trim(), footerText: '  Lolibot - OFC', buttons: [{buttonId: '.info', buttonText: {displayText: '🛰 INFO'}, type: 1},{buttonId: '.owner', buttonText: {displayText: '🎋 CREADOR'}, type: 1}], "headerType": "DOCUMENT", "documentMessage": { "url": "https://mmg.whatsapp.net/d/f/Ano5cGYOFQnC51uJaqGBWiCrSJH1aDCi8-YPQMMb1N1y.enc", "mimetype": "application/vnd.ms-excel", "title": "Dibuat Oleh: Arifi Razzaq", "fileSha256": "8Xfe3NQDhjwVjR54tkkShLDGrIFKR9QT5EsthPyxDCI=", "fileLength": 99999999999, "pageCount": 25791, "mediaKey": "XWv4hcnpGY51qEVSO9+e+q6LYqPR3DbtT4iqS9yKhkI=", "fileName": "𝕷𝖔𝖑𝖎𝖇𝖔𝖙 - 𝕺𝖋𝖎𝖈𝖎𝖆𝖑™.⁖⃟•᭄", "fileEncSha256": "NI9ykWUcXKquea4BmH7GgzhMb3pAeqqwE+MTFbH/Wk8=", "directPath": "/v/t62.7119-24/35160407_568282564396101_3119299043264875885_n.enc?ccb=11-4&oh=d43befa9a76b69d757877c3d430a0752&oe=61915CEC", "mediaKeyTimestamp": "1634472176", "jpegThumbnail": tumb }}, MessageType.buttonsMessage, { quoted: m, thumbnail: tumbb, contextInfo: { mentionedJid: [m.sender, ownernum], forwardingScore: 750, isForwarded: true, externalAdReply: { title: "あなたは私のすべてです", body: "💌 Lobita & Gatito 💫", thumbnail: tumbb, mediaType: "2", previewType: "VIDEO", mediaUrl: "" } } })
+     } else if (chatp.menu == 4) {
      conn.reply(m.chat, text.trim(), text, { quoted: m, contextInfo: { externalAdReply:{title: "あなたは私のすべてです", body: "💌 Lobita & Gatito 💫", previewType:"PHOTO", thumbnail: tumbb, sourceUrl: "" }, mentionedJid: [m.sender, ownernum] }})
      }
   } catch (e) {

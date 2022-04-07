@@ -8,8 +8,8 @@ let fetch = require('node-fetch')
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 let mentionedJid = [who]
 let username = conn.getName(who)
-let pp = 'https://imgur.com/O1J4KJ7.jpg'
-let kai = 'https://imgur.com/O1J4KJ7.jpg'
+let pp = await(await fetch('https://imgur.com/O1J4KJ7.jpg')).buffer()
+let kai = await(await fetch('https://imgur.com/O1J4KJ7.jpg')).buffer()
 let menu =`
 ╭══〘 🐈⚡️🐈⚡️🐈⚡️🐈 〙══╮
 ║═ 𝙂𝙖𝙩𝙖𝘽𝙤𝙩 | 𝙂𝙖𝙩𝙖 𝘿𝙞𝙤𝙨

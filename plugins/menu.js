@@ -8,8 +8,7 @@ let fetch = require('node-fetch')
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 let mentionedJid = [who]
 let username = conn.getName(who)
-let pp = await(await fetch('https://imgur.com/O1J4KJ7.jpg')).buffer()
-let kai = await(await fetch('https://imgur.com/O1J4KJ7.jpg')).buffer()
+let pp = './Menu2.jpg'
 let menu =`
 ╭══〘 🐈⚡️🐈⚡️🐈⚡️🐈 〙══╮
 ║═ 𝙂𝙖𝙩𝙖𝘽𝙤𝙩 | 𝙂𝙖𝙩𝙖 𝘿𝙞𝙤𝙨
@@ -405,7 +404,7 @@ let menu =`
 ┣ ↠💎 _${usedPrefix}bcgc *texto*_
 ┗━━━━━━━━━━━━━━━━━━┛
 𝙂𝙖𝙩𝙖 𝘿𝙞𝙤𝙨`.trim()
-conn.send2ButtonLoc(m.chat, (await fetch(pp)).buffer(), `
+conn.send2ButtonImg(m.chat, pp, menu, (await fetch(pp)).buffer(), `
 ⁖ᯓ፨҈༺ 𝙂𝙖𝙩𝙖𝘽𝙤𝙩 | 𝙂𝙖𝙩𝙖 𝘿𝙞𝙤𝙨 ༻፨҈ᯓ⁖
 `.trim(), menu, '🍁 𝙃𝙊𝙇𝘼 🍁', `#simi hola bot`, '🔊 𝙈𝙀𝙉𝙐 𝘿𝙀 𝘼𝙐𝘿𝙄𝙊𝙎 🔊', `#audiosrandom`, m, false, { contextInfo: { mentionedJid }})}
 handler.command = /^(menu|Menú|Menu|menú|help|Help)$/i

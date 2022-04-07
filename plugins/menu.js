@@ -5,15 +5,14 @@
 //SI VAS A MODIFICAR TODO Y HACER PASAR COMO SI FUERA TU BOT (CREADO POR TI) SOLO TE PIDO QUE SI ESTA EN TUS POSIBILIDADES DONES UN POCO
 
 let fs = require('fs')
-let handler = async (m, { conn, command, text, usedPrefix }) => {
 let fetch = require('node-fetch')
 let moment = require('moment-timezone')
 let path = require('path')
 let util = require('util')
-let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
-let mentionedJid = [who]
-let username = conn.getName(who)
+let handler = async (m, { conn, usedPrefix }) => {
 let pp = './Menu2.jpg'
+let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
+let username = conn.getName(who)
 let menu =`
 ╭══〘 🐈⚡️🐈⚡️🐈⚡️🐈 〙══╮
 ║═ 𝙂𝙖𝙩𝙖𝘽𝙤𝙩 | 𝙂𝙖𝙩𝙖 𝘿𝙞𝙤𝙨

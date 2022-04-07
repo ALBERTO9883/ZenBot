@@ -8,7 +8,7 @@ let fetch = require('node-fetch')
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 let mentionedJid = [who]
 let username = conn.getName(who)
-let pp = './src/menu2'
+let pp = './src/menu2.jpg'
 let menu =`
 ╭══〘 🐈⚡️🐈⚡️🐈⚡️🐈 〙══╮
 ║═ 𝙂𝙖𝙩𝙖𝘽𝙤𝙩 | 𝙂𝙖𝙩𝙖 𝘿𝙞𝙤𝙨
@@ -406,6 +406,6 @@ let menu =`
 𝙂𝙖𝙩𝙖 𝘿𝙞𝙤𝙨`.trim()
 conn.send2ButtonLoc(m.chat, (await fetch(pp)).buffer(), `
 ⁖ᯓ፨҈༺ 𝙂𝙖𝙩𝙖𝘽𝙤𝙩 | 𝙂𝙖𝙩𝙖 𝘿𝙞𝙤𝙨 ༻፨҈ᯓ⁖
-`.trim(), menu, '🍁 𝙃𝙊𝙇𝘼 🍁', #simi hola bot`, '🔊 𝙈𝙀𝙉𝙐 𝘿𝙀 𝘼𝙐𝘿𝙄𝙊𝙎 🔊', `#audiosrandom`, m, false, { contextInfo: { mentionedJid }})}
+`.trim(), menu, '🍁 𝙃𝙊𝙇𝘼 🍁', `#simi hola bot`, '🔊 𝙈𝙀𝙉𝙐 𝘿𝙀 𝘼𝙐𝘿𝙄𝙊𝙎 🔊', `#audiosrandom`, m, false, { contextInfo: { mentionedJid }})}
 handler.command = /^(menu|Menú|Menu|menú|help|Help)$/i
 module.exports = handler

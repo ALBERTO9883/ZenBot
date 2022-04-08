@@ -36,7 +36,8 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
     let uptime = clockString(_uptime)
     let totalreg = Object.keys(global.DATABASE._data.users).length
     let tags = {
-      'main': '🎋 *MENÚS* 🎋',
+      'main': '•🎋 *MENÚS* 🎋•',
+      'info': '•ℹ️ *INFORMACIÓN* ℹ️•',
       'xp': '𝗘𝘅𝗽 & 𝗟𝗶𝗺𝗶𝘁',
       'rpg': '•⚔️ *RPG* ⚔️•',
       'sticker': '𝗦𝘁𝗶𝗰𝗸𝗲𝗿',
@@ -45,10 +46,10 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
       'quotes': 'Quotes',
       'images' : 'IMAGES',
       'premium': 'Premium',
-      'data' : 'INFORMATION',
       'anonymous': 'Anonymous Chat',
       'nulis': 'MagerNulis & Logo',
       'admin': '𝗔𝗱𝗺𝗶𝗻',
+      'data': 'información',
       'group': '𝗚𝗿𝗼𝘂𝗽',
       'internet': '𝗜𝗻𝘁𝗲𝗿𝗻𝗲𝘁',
       'downloader': '𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱𝗲𝗿',
@@ -61,7 +62,6 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
       'owner': '𝗢𝘄𝗻𝗲𝗿 𝗺𝗲𝗻𝘂',
       'host': '𝗛𝗼𝘀𝘁',
       'advanced': '𝗔𝗱𝘃𝗮𝗻𝗰𝗲𝗱',
-      'info': '𝗜𝗻𝗳𝗼',
       'database': '𝗱𝗮𝘁𝗮b𝗮𝘀𝗲',
       '': 'No Category',
     }

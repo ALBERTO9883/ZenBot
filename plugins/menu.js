@@ -38,9 +38,9 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
     let tags = {
       'main': '•🎋MENÚS🎋•',
       'info': '•ℹ️INFORMACIÓN ℹ️•', 
-      'bug': '•📬REPORTAR FALLAS📬•'
-      'premium': '•🍂PREMIUM🍂•'
-      'top': '•🎖️TOPS🎖️'
+      'bug': '•📬REPORTAR FALLAS📬•',
+      'premium': '•🍂PREMIUM🍂•',
+      'top': '•🎖️TOPS🎖️',
       'rpg': '•⚔️ RPG ⚔️•',
       'sticker': '𝗦𝘁𝗶𝗰𝗸𝗲𝗿',
       'kerang': '𝗝𝘂𝗲𝗴𝗼𝘀',

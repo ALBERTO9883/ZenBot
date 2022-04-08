@@ -1,6 +1,7 @@
 let fs = require ('fs')
 let path = require('path')
 let os = require('os')
+let username = conn.getName(who)
 let { performance } = require('perf_hooks')
 let handler  = async (m, { conn, usedPrefix: _p }) => {
   try {
@@ -36,9 +37,9 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
     let uptime = clockString(_uptime)
     let totalreg = Object.keys(global.DATABASE._data.users).length
     let tags = {
-      'main': '𝗠𝗘𝗡𝗨',
+      'main': '🎋 *MENÚS* 🎋',
       'xp': '𝗘𝘅𝗽 & 𝗟𝗶𝗺𝗶𝘁',
-      'rpg': 'Epic RPG',
+      'rpg': '•⚔️ *RPG* ⚔️•',
       'sticker': '𝗦𝘁𝗶𝗰𝗸𝗲𝗿',
       'kerang': '𝗝𝘂𝗲𝗴𝗼𝘀',
       'game': 'GAME',
@@ -92,7 +93,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
     let before = conn.menu.before || `
 *╭═〘🍁 THE ZEN-O-BOT 🍁〙═╮*
 ⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯
-➤ *Hola, %name!*
+➤ *Hola, @${m.sender.split("@s.whatsapp.net")[0]}!*
 ⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯
  🎋 𝗫𝗣: %exp
  📆𝗙𝗲𝗰𝗵𝗮: %weton, %date
@@ -104,9 +105,9 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
  📲𝗦𝗶𝘀𝘁𝗲𝗺𝗮: ${conn.user.phone.device_manufacturer}
 *╰┅ৡৢ͜͡✦═╡ZEN-BOT╞═┅ৡৢ͜͡✦┅╯*
 %readmore`
-    let header = conn.menu.header || '*╭═┅〘✨ %category 〙═╮*'
-    let body   = conn.menu.body   || '*▌║✙* %cmd%islimit'
-    let footer = conn.menu.footer || '*╰═┅ৡৢ͜͡✦═══╡🔥╞═══┅ৡৢ͜͡✦═╯*\n'
+    let header = conn.menu.header || '*╭═〘 %category 〙═╮*'
+    let body   = conn.menu.body   || '*🪴⃟➜⃓* %cmd%islimit'
+    let footer = conn.menu.footer || '*╰═ৡৢ͜͡✦═╡🍁╞═ৡৢ͜͡✦═╯*\n'
     let after  = conn.menu.after  || (conn.user.jid == global.conn.user.jid ? '' : `Powered by https://wa.me/${global.conn.user.jid.split`@`[0]}`) + `\n*%npmname@^%version*\n\`\`\`\%npmdesc\`\`\``
     let _text  = before + '\n'
     for (let tag in groups) {

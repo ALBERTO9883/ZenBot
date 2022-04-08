@@ -11,7 +11,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
     let name = conn.getName(m.sender)
     let d = new Date
     let locale = 'es'
-    let weton = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes','Sábado','Domingo'][Math.floor(d / 84600000) % 5]
+    let weton = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves','Viernes','Sábado'][Math.floor(d / 84600000) % 5]
     let week = d.toLocaleDateString(locale, { weekday: 'long' })
     let date = d.toLocaleDateString(locale, {
       day: 'numeric',
@@ -93,7 +93,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
     let before = conn.menu.before || `
 *╭═〘🍁 THE ZEN-O-BOT 🍁〙═╮*
 ⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯
-➤ *Hola, %user!*
+➤ *Hola, %name!*
 ⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯
  🎋 𝗫𝗣: %exp
  📆𝗙𝗲𝗰𝗵𝗮: %weton, %date
@@ -105,7 +105,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
  📲𝗦𝗶𝘀𝘁𝗲𝗺𝗮: ${conn.user.phone.device_manufacturer}
 *╰┅ৡৢ͜͡✦═╡ZEN-BOT╞═┅ৡৢ͜͡✦┅╯*
 %readmore`
-    let header = conn.menu.header || '*━〘 %category 〙━*'
+    let header = conn.menu.header || '*╭〘%category〙╮*'
     let body   = conn.menu.body   || '*🪴⃟➜⃓* %cmd%islimit'
     let footer = conn.menu.footer || '*╰═ৡৢ͜͡✦═╡🍁╞═ৡৢ͜͡✦═╯*\n'
     let after  = conn.menu.after  || (conn.user.jid == global.conn.user.jid ? '' : `Powered by https://wa.me/${global.conn.user.jid.split`@`[0]}`) + `\n*%npmname@^%version*\n\`\`\`\%npmdesc\`\`\``

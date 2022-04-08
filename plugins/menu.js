@@ -1,7 +1,6 @@
 let fs = require ('fs')
 let path = require('path')
 let os = require('os')
-let username = conn.getName(who)
 let { performance } = require('perf_hooks')
 let handler  = async (m, { conn, usedPrefix: _p }) => {
   try {
@@ -10,7 +9,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
     let exp = global.DATABASE.data.users[m.sender].exp
     let limit = global.DATABASE.data.users[m.sender].limit
     let name = conn.getName(m.sender)
-    let d = new Date(new Date + 3600000)
+    let d = new Date
     let locale = 'es'
     let weton = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes','Sábado','Domingo'][Math.floor(d / 84600000) % 5]
     let week = d.toLocaleDateString(locale, { weekday: 'long' })
@@ -93,7 +92,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
     let before = conn.menu.before || `
 *╭═〘🍁 THE ZEN-O-BOT 🍁〙═╮*
 ⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯
-➤ *Hola, @${m.sender.split("@s.whatsapp.net")[0]}!*
+➤ *Hola, %user!*
 ⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯
  🎋 𝗫𝗣: %exp
  📆𝗙𝗲𝗰𝗵𝗮: %weton, %date

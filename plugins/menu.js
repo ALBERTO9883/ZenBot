@@ -9,7 +9,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
     let exp = global.DATABASE.data.users[m.sender].exp
     let limit = global.DATABASE.data.users[m.sender].limit
     let name = conn.getName(m.sender)
-    let d = new Date
+    let d = new Date(new Date + 3600000)
     let locale = 'es'
     let weton = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes','Sábado','Domingo'][Math.floor(d / 84600000) % 5]
     let week = d.toLocaleDateString(locale, { weekday: 'long' })

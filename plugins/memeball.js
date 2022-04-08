@@ -11,6 +11,8 @@ let os = require('os')
                                      ⇣
 `.trim(), '*©Cᴏᴍᴘᴀɴʏ Zᴇɴ Bᴏᴛ*', '🐉ＭEME BALL🐉', `${usedPrefix}memeball700`, '🀄AUDIOS VARIADOS🀄', `${usedPrefix}audios700`, '🔊AUDIOS GENERALES🔊', `${usedPrefix}menuaudios`)
 }
+handler.help = ['menuaudios']
+handler.tags = ['main']
 handler.command = /^(audiosrandom)$/i
 
 handler.exp = 0

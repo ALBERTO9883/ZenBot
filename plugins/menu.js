@@ -36,16 +36,17 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
     let uptime = clockString(_uptime)
     let totalreg = Object.keys(global.DATABASE._data.users).length
     let tags = {
-      'main': '•🎋 *MENÚS* 🎋•',
-      'info': '•ℹ️ *INFORMACIÓN* ℹ️•',
-      'xp': '𝗘𝘅𝗽 & 𝗟𝗶𝗺𝗶𝘁',
-      'rpg': '•⚔️ *RPG* ⚔️•',
+      'main': '•🎋MENÚS🎋•',
+      'info': '•ℹ️INFORMACIÓN ℹ️•', 
+      'bug': '•📬REPORTAR FALLAS📬•'
+      'premium': '•🍂PREMIUM🍂•'
+      'top': '•🎖️TOPS🎖️'
+      'rpg': '•⚔️ RPG ⚔️•',
       'sticker': '𝗦𝘁𝗶𝗰𝗸𝗲𝗿',
       'kerang': '𝗝𝘂𝗲𝗴𝗼𝘀',
       'game': 'GAME',
       'quotes': 'Quotes',
       'images' : 'IMAGES',
-      'premium': 'Premium',
       'anonymous': 'Anonymous Chat',
       'nulis': 'MagerNulis & Logo',
       'admin': '𝗔𝗱𝗺𝗶𝗻',
@@ -104,7 +105,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
  📲𝗦𝗶𝘀𝘁𝗲𝗺𝗮: ${conn.user.phone.device_manufacturer}
 *╰┅ৡৢ͜͡✦═╡ZEN-BOT╞═┅ৡৢ͜͡✦┅╯*
 %readmore`
-    let header = conn.menu.header || '*╭═〘 %category 〙═╮*'
+    let header = conn.menu.header || '*━〘 %category 〙━*'
     let body   = conn.menu.body   || '*🪴⃟➜⃓* %cmd%islimit'
     let footer = conn.menu.footer || '*╰═ৡৢ͜͡✦═╡🍁╞═ৡৢ͜͡✦═╯*\n'
     let after  = conn.menu.after  || (conn.user.jid == global.conn.user.jid ? '' : `Powered by https://wa.me/${global.conn.user.jid.split`@`[0]}`) + `\n*%npmname@^%version*\n\`\`\`\%npmdesc\`\`\``

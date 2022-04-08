@@ -90,25 +90,18 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
     }
     conn.menu = conn.menu ? conn.menu : {}
     let before = conn.menu.before || `
-*╭═┅〘 ${conn.getName(conn.user.jid)} 〙═╮*
-*║┊:* 🙂𝗛ola, %name!,%greeting
-*║┊:* ⃟ ⃟  ━ೋ๑————๑ೋ━* ⃟ ⃟ *      
-*║┊:◄✜┢┅ீ͜ৡৢ͜͡✦━━◇━━ீ͜ৡৢ͜͡✦┅┧✜►*
-*║┊:* ✨ *%exp XP*
-*║┊:* ⚠𝗟𝗶𝗺𝗶𝘁𝗲𝘀 *%limit limites*
-*║┊:*
-*║┊:* 📆𝗙𝗲𝗰𝗵𝗮: *%weton, %date*
-*║┊:* ⌚𝗛𝗼𝗿𝗮: *%time*
-*║┊:*
-*║┊:* 🕐𝘁𝗶𝗲𝗺𝗽𝗼 𝗱𝗲 𝗮𝗰𝘁𝗶𝘃𝗶𝗱𝗮𝗱: *%uptime*
-*║┊:* 📁𝗗𝗮𝘁𝗮𝗯𝗮𝘀𝗲: %totalreg numeros
-*║┊:* 🌐Navegador : *${conn.browserDescription[1]}*
-*║┊:* 📡servidor : *${conn.browserDescription[0]}*
-*║┊:* ✅version : *${conn.browserDescription[2]}*
-*║┊:* 🚄Velocidad : *${neww}* ms
-*║┊:* 📲Sistema operativo : *${conn.user.phone.device_manufacturer}*
-*║┊:* 🪀version de *WhatsApp* : ${conn.user.phone.wa_version}
-*╰═┅ৡৢ͜͡✦═══╡𝗦𝗮𝗺𝘂𝟯𝟯𝟬╞═══┅ৡৢ͜͡✦═╯*
+*╭═〘🍁 THE ZEN-O-BOT 🍁〙═╮*
+➤ *Hola, %name!*
+
+ 🎋 𝗫𝗣:* %exp
+ 📆𝗙𝗲𝗰𝗵𝗮: %weton, %date
+ ⌚𝗛𝗼𝗿𝗮: %time
+ 🕐𝘁𝗶𝗲𝗺𝗽𝗼 𝗱𝗲 𝗮𝗰𝘁𝗶𝘃𝗶𝗱𝗮𝗱: %uptime
+ 📁𝗗𝗮𝘁𝗮𝗯𝗮𝘀𝗲: %totalreg numeros
+ 🔋𝗕𝗮𝘁𝗲𝗿𝗶𝗮: *${conn.battery ? `${conn.battery.value}%* *${conn.battery.live ? '🔌 Cargando...*' : '⚡ Desconectado*'}` : 'Desconocido*'}
+ 🚄𝗩𝗲𝗹𝗼𝗰𝗶𝗱𝗮𝗱: *${neww}* ms
+ 📲𝗦𝗶𝘀𝘁𝗲𝗺𝗮: *${conn.user.phone.device_manufacturer}*
+*╰═┅ৡৢ͜͡✦══╡ZEN-BOT╞══┅ৡৢ͜͡✦═╯*
 %readmore
 *╭═┅〘🛑 𝗢𝗯𝗲𝗱𝗲𝗰𝗲 𝗹𝗮𝘀 𝗿𝗲𝗴𝗹𝗮𝘀 🛑〙*
 *▌║✙*❌𝑷𝒓𝒐𝒉𝒊𝒃𝒊𝒅𝒐 𝒍𝒍𝒂𝒎𝒂𝒓 𝒂𝒍 𝒃𝒐𝒕📲
@@ -174,34 +167,3 @@ function clockString(ms) {
   let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
   return [h, m, s].map(v => v.toString().padStart(2, 0) ).join(':')
 }
-
-
-var ase = new Date();
-                        var waktoonyabro = ase.getHours();
-                        switch(waktoonyabro){
-                case 0: waktoonyabro = `que tengas una linda noche 🌙`; break;
-                case 1: waktoonyabro = `que tengas una linda noche 💤`; break;
-                case 2: waktoonyabro = `que tengas una linda noche 🦉`; break;
-                case 3: waktoonyabro = `que tengas una linda mañana ✨`; break;
-                case 4: waktoonyabro = `que tengas una linda mañana 💫`; break;
-                case 5: waktoonyabro = `que tengas una linda mañana 🌅`; break;
-                case 6: waktoonyabro = `que tengas una linda mañana 🌄`; break;
-                case 7: waktoonyabro = `que tengas una linda mañana 🌅`; break;
-                case 8: waktoonyabro = `que tengas una linda mañana 💫`; break;
-                case 9: waktoonyabro = `que tengas una linda mañana ✨`; break;
-                case 10: waktoonyabro = `que tengas un lindo dia 🌞`; break;
-                case 11: waktoonyabro = `que tengas un lindo dia 🌨`; break;
-                case 12: waktoonyabro = `que tengas un lindo dia ❄`; break;
-                case 13: waktoonyabro = `que tengas un lindo dia 🌤`; break;
-                case 14: waktoonyabro = `que tengas una linda tarde 🌇`; break;
-                case 15: waktoonyabro = `que tengas una linda tarde 🥀`; break;
-                case 16: waktoonyabro = `que tengas una linda tarde 🌹`; break;
-                case 17: waktoonyabro = `que tengas una linda tarde 🌆`; break;
-                case 18: waktoonyabro = `que tengas una linda noche 🌙`; break;
-                case 19: waktoonyabro = `que tengas una linda noche 🌃`; break;
-                case 20: waktoonyabro = `que tengas una linda noche 🌌`; break;
-                case 21: waktoonyabro = `que tengas una linda noche 🌃`; break;
-                case 22: waktoonyabro = `que tengas una linda noche 🌙`; break;
-                case 23: waktoonyabro = `que tengas una linda noche 🌃`; break;
-            }
-            var saludo = "" + waktoonyabro;

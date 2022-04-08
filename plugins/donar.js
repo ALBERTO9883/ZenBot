@@ -16,5 +16,7 @@ let handler = async m => m.reply(`
 *┃❖ wa.me/50499698072*
 *┗ ┅ ━━━━━━━━━━━━━ ┅ ━*
 `.trim()) 
+handler.help = ['donar']
+handler.tags = ['info']
 handler.command = /^(dona|donar|apoyar|dardinero|apoyo)$/i
 module.exports = handler

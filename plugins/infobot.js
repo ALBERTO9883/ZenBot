@@ -68,8 +68,8 @@ let handler = async (m, { conn, usedPrefix }) => {
 `.trim() 
   conn.fakeReply(m.chat, info, '0@s.whatsapp.net', '*🔥 THE SHADOW BROKERS - BOT 🔥*', 'status@broadcast')
 }
-//handler.help = ['ping', 'speed']
-//handler.tags = ['info', 'tools']
+handler.help = ['infobot']
+handler.tags = ['info']
 
 handler.command = /^(infobot)$/i
 

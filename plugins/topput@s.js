@@ -48,8 +48,7 @@ function handler(m, { groupMetadata }) {
         }
     })
 }
-handler.help = ['toppt']
-handler.tags = ['main']
+handler.help = ['topputos']
 handler.command = ['toppt','topputo','topputa','topputos','topputas','topput@','topput@s']
 handler.group = true
 

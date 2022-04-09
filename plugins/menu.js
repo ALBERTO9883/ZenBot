@@ -2,6 +2,7 @@ let fs = require ('fs')
 let path = require('path')
 let os = require('os')
 let { performance } = require('perf_hooks')
+let ownernum = "50499698072@s.whatsapp.net"
 let handler  = async (m, { conn, usedPrefix: _p }) => {
   try {
     let package = JSON.parse(fs.readFileSync(path.join(__dirname, '../package.json')))
@@ -22,7 +23,6 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
       hour: 'numeric',
       minute: 'numeric',
       second: 'numeric'
-      hour12: true
     })
     let _uptime = process.uptime() * 1000
     let _muptime
@@ -96,8 +96,9 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
 ⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯
 ➤ *Hola, %name!*
 ⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯
+ 🐢𝗖𝗿𝗲𝗮𝗱𝗼𝗿: @%ownum
  🎋 𝗫𝗣: %exp
- 📆𝗙𝗲𝗰𝗵𝗮: %weton, %date
+ 📆𝗙𝗲𝗰𝗵𝗮: %date
  ⌚𝗛𝗼𝗿𝗮: %time
  🕐𝘁𝗶𝗲𝗺𝗽𝗼 𝗱𝗲 𝗮𝗰𝘁𝗶𝘃𝗶𝗱𝗮𝗱: %uptime
  📁𝗗𝗮𝘁𝗮𝗯𝗮𝘀𝗲: %totalreg numeros

@@ -42,6 +42,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
       'premium': '•🍂PREMIUM🍂•',
       'top': '•🎖️TOPS🎖️',
       'rpg': '•⚔️ RPG ⚔️•',
+      'game': '•🕹JUEGOS🕹•',
       'sticker': '𝗦𝘁𝗶𝗰𝗸𝗲𝗿',
       'kerang': '𝗝𝘂𝗲𝗴𝗼𝘀',
       'game': 'GAME',
@@ -91,9 +92,9 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
     }
     conn.menu = conn.menu ? conn.menu : {}
     let before = conn.menu.before || `
-*╭═〘🍁 THE ZEN-O-BOT 🍁〙═╮*
+*╭═〘🌴 THE ZEN-O-BOT 🌴〙═╮*
 ⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯
-➤ *Hola, %name!*
+➤ *Hola %name*,*Que tengas un lindo verano🏖️*
 ⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯
  🎋 𝗫𝗣: %exp
  📆𝗙𝗲𝗰𝗵𝗮: %date
@@ -101,13 +102,12 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
  🕐𝘁𝗶𝗲𝗺𝗽𝗼 𝗱𝗲 𝗮𝗰𝘁𝗶𝘃𝗶𝗱𝗮𝗱: %uptime
  📁𝗗𝗮𝘁𝗮𝗯𝗮𝘀𝗲: %totalreg numeros
  🔋𝗕𝗮𝘁𝗲𝗿𝗶𝗮: *${conn.battery ? `${conn.battery.value}%* *${conn.battery.live ? '🔌 Cargando...*' : '⚡ Desconectado*'}` : 'Desconocido*'}
- 🚄𝗩𝗲𝗹𝗼𝗰𝗶𝗱𝗮𝗱: ${neww} ms
  📲𝗦𝗶𝘀𝘁𝗲𝗺𝗮: ${conn.user.phone.device_manufacturer}
 *╰┅ৡৢ͜͡✦═╡ZEN-BOT╞═┅ৡৢ͜͡✦┅╯*
 %readmore`
     let header = conn.menu.header || '*╭〘%category〙╮*'
-    let body   = conn.menu.body   || '*🪴⃟➜⃓* %cmd%islimit'
-    let footer = conn.menu.footer || '*╰═ৡৢ͜͡✦══╡🍁╞══ৡৢ͜͡✦═╯*\n'
+    let body   = conn.menu.body   || '🍹⃟➜⃓* %cmd%islimit'
+    let footer = conn.menu.footer || '*╰═ৡৢ͜͡✦══╡🌴╞══ৡৢ͜͡✦═╯*\n'
     let after  = conn.menu.after  || (conn.user.jid == global.conn.user.jid ? '' : `Powered by https://wa.me/${global.conn.user.jid.split`@`[0]}`) + `\n*%npmname@^%version*\n\`\`\`\%npmdesc\`\`\``
     let _text  = before + '\n'
     for (let tag in groups) {

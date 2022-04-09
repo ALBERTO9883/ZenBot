@@ -2,7 +2,6 @@ let fs = require ('fs')
 let path = require('path')
 let os = require('os')
 let { performance } = require('perf_hooks')
-let ownernum = "50499698072@s.whatsapp.net"
 let handler  = async (m, { conn, usedPrefix: _p }) => {
   try {
     let package = JSON.parse(fs.readFileSync(path.join(__dirname, '../package.json')))
@@ -96,7 +95,6 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
 ⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯
 ➤ *Hola, %name!*
 ⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯
- 🐢𝗖𝗿𝗲𝗮𝗱𝗼𝗿: @%ownum
  🎋 𝗫𝗣: %exp
  📆𝗙𝗲𝗰𝗵𝗮: %date
  ⌚𝗛𝗼𝗿𝗮: %time

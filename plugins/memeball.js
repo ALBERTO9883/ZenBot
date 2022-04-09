@@ -13,7 +13,7 @@ let os = require('os')
 }
 handler.help = ['menuaudios']
 handler.tags = ['main']
-handler.command = /^(audiosrandom)$/i
+handler.command = /^(menuaudios|Menuaudios|audiosrandom)$/i
 
 handler.exp = 0
 

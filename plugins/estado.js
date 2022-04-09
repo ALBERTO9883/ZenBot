@@ -1,20 +1,19 @@
 let fetch = require('node-fetch')
 let handler = async (m, { conn, command, text, usedPrefix }) => {
 let os = require('os')
-let { isBanned, welcome, antivirtex, detect, sWelcome, sBye, sPromote, sDemote, antiLink } = global.DATABASE.data.chats[m.chat]
-  await conn.send2Button(m.chat, `
-*━━━━━━━━━━━━━━━━*
- *PORFAVOR ELIJA UNA OPCIÓN* 
-   
-   ${welcome ? '✅' : '❌'} Welcome
-   
-`.trim(), '*©Cᴏᴍᴘᴀɴʏ Zᴇɴ Bᴏᴛ*', '*✅Activar✅*', `${usedPrefix}enable welcome`, '*❕Desactivar❕*', `${usedPrefix}disable welcome`)
+  await conn.send3Button(m.chat, `
+*┃▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰*
+*┃🪐H O L A   U S U A R I O🪐*
+*┃*
+*┃⚡ESΓΔDO DEL BOΓ⚡*
+*┃*
+*┃* *[🔋] Bᴀᴛᴇʀɪᴀ:* *${conn.battery ? `${conn.battery.value}%* *${conn.battery.live ? '🔌 Cᴀʀɢᴀɴᴅᴏ...*' : '⚡ Dᴇsᴄᴏɴᴇᴄᴛᴀᴅᴏ*'}` : 'Dᴇsᴄᴏɴᴏᴄɪᴅᴏ*'}
+*┃➥❖ [Bᴏᴛ Aᴄᴛɪᴠᴏ✅]*
+*┃➥❖ [Bᴏᴛ Usᴏ Pᴜʙʟɪᴄᴏ✅]*
+*┃▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰*
+`.trim(), '*©Cᴏᴍᴘᴀɴʏ Zᴇɴ Bᴏᴛ*', '🀄ＭＥＮＵ🀄', `${usedPrefix}menu`, '⚜  ＭＥＮＵ ＳＩＭＰＬＥ ⚜', `${usedPrefix}menusimple`, '🔆 ＭＥＮＵ ＡＵＤＩＯＳ🔆', `${usedPrefix}menuaudios`)
 }
-handler.command = /^(welcome|Welcome|Bienvenida|bienvenida)$/i
-handler.group = true
-handler.admin = true
-handler.botAdmin = true
-handler.fail = null
+handler.command = /^(estado|status|estate|state|stado|stats)$/i
 
 handler.exp = 0
 

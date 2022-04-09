@@ -14,6 +14,8 @@ let info = `
 
 conn.fakeReply(m.chat, info, '0@s.whatsapp.net', '*🔥 THE ZEN-O-BOT🔥*', 'status@broadcast')
 }
+handler.help = ['grupos']
+handler.tags = ['info']
 handler.command = /^(grupos|gruposofc|gruposofc)$/i
 
 module.exports = handler

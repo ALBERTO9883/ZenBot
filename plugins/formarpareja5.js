@@ -53,7 +53,6 @@ function handler(m, { groupMetadata }) {
     })
 }
 handler.help = ['formarpareja5']
-handler.tags = ['main']
 handler.command = ['👫','formarpareja5']
 handler.group = true
 

@@ -9,20 +9,22 @@ if (!vid) throw '*Video/Audio No encontrado* '
 let isVideo = /2$/.test(command)
 let { dl_link, thumb, title, filesize, filesizeF} = await (isVideo ? ytv : yta)(vid.url, 'id4')
 conn.sendFile(m.chat, thumb, 'thumbnail.jpg', `
-*©Cᴏᴍᴘᴀɴʏ Zᴇɴ-O-Bᴏᴛ*
-
-*${title}*
-*⇄ㅤ     ◁   ㅤ  ❚❚ㅤ     ▷ㅤ     ↻*
-
-*📂Tamaño del archivo:* ${filesizeF}
-*👉🏻Aguarde un momento en lo que envío su audio/video*
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+*🍁Título: ${title}*
+⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯
+*📂Tamaño del archivo: *${filesizeF}*
+⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯
+*🪴 _AGUARDE UN MOMENTO_🪴*
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
 `.trim(), m)
 let _thumb = {}
 try { if (isVideo) _thumb = { thumbnail: await (await fetch(thumb)).buffer() } }
 catch (e) { }
 conn.sendFile(m.chat, dl_link, title + '.mp' + (3 + /2$/.test(command)), `
-*🔥Título:* ${title}
-*📂Tamaño del archivo:* ${filesizeF}
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+*🍁Título:* *${title}*
+*📂Tamaño del archivo:* *${filesizeF}*
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
 `.trim(), m, false, _thumb || {})}
 handler.help = ['play' , 'play2']
 handler.command = /^play2?$/i

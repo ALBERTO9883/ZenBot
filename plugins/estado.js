@@ -13,6 +13,8 @@ let os = require('os')
 *┃▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰*
 `.trim(), '*©Cᴏᴍᴘᴀɴʏ Zᴇɴ Bᴏᴛ*', '🀄ＭＥＮＵ🀄', `${usedPrefix}menu`, '⚜  ＭＥＮＵ ＳＩＭＰＬＥ ⚜', `${usedPrefix}menusimple`, '🔆 ＭＥＮＵ ＡＵＤＩＯＳ🔆', `${usedPrefix}menuaudios`)
 }
+handler.help = ['estado']
+handler.tags = ['info']
 handler.command = /^(estado|status|estate|state|stado|stats)$/i
 
 handler.exp = 0

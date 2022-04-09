@@ -48,8 +48,7 @@ function handler(m, { groupMetadata }) {
         }
     })
 }
-handler.help = ['top10gay','top10gays']
-handler.tags = ['main']
+handler.help = ['top10gays']
 handler.command = ['top10gay','top10gays','top10gey','top10geys','topgay']
 handler.group = true
 

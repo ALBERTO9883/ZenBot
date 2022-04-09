@@ -14,7 +14,6 @@ function handler(m, { groupMetadata }) {
     })
 }
 handler.help = ['formarpareja']
-handler.tags = ['main']
 handler.command = ['formarpareja','formarparejas']
 handler.group = true
 

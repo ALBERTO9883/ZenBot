@@ -5,8 +5,7 @@ let handler = async (m, { text }) => {
   m.reply(`*[ ⚠️ ] El usuario ${conn.getName(m.sender)} estará inactivo (AFK) no lo etiqueten*\n\n*🔰 Motivo de la inactividad${text ? ': ' + text : ''}*
 `)
 }
-handler.help = ['afk [alasan]']
-handler.tags = ['main']
+handler.help = ['afk [motivo]']
 handler.command = /^afk$/i
 
 module.exports = handler

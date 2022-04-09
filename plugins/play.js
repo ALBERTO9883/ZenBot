@@ -12,7 +12,7 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
   let yt = false
   let yt2 = false
   let usedServer = servers[0]
-  m.reply('*⏳Procesando⏳*\n\n*[❗] Si no obtiene ningun resultado o le sale algun error intente con otro nombre*')
+  m.reply('*⏳Procesando⏳*\n\n*  *🪴 Tenga paciencia mientras 🪴*\n *ㅤ  🪴busco sus resultados 🪴*')
   for (let i in servers) {
     let server = servers[i]
     try {
@@ -31,7 +31,7 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
 *🔥 Titulo:* _${title}_
 *📂 Peso del audio:* _${filesizeF}_
 *📂 Peso del video:* _${yt2.filesizeF}_
-`.trim(), '©The Zen-O-Bot', '🎵 AUDIO 💽 ', `.yta ${vid.url}`, '🎥 VIDEO 🎞️', `.yt ${vid.url}`)
+`.trim(), '*©The Zen-O-Bot*', '🎵 AUDIO 💽 ', `.yta ${vid.url}`, '🎥 VIDEO 🎞️', `.yt ${vid.url}`)
 }
 handler.help = ['play'].map(v => v + ' <pencarian>')
 handler.tags = ['downloader']

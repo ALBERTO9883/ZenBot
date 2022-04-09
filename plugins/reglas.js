@@ -9,6 +9,8 @@ let info = `
 
 conn.fakeReply(m.chat, info, '0@s.whatsapp.net', '*🔥 THE ZEN-O-BOT🔥*', 'status@broadcast')
 }
+handler.help = ['reglas']
+handler.tags = ['info']
 handler.command = /^(reglas|normas)$/i
 
 module.exports = handler

@@ -49,6 +49,7 @@ function handler(m, { groupMetadata }) {
     })
 }
 handler.help = ['top10gays']
+handler.tags = ['top']
 handler.command = ['top10gay','top10gays','top10gey','top10geys','topgay']
 handler.group = true
 

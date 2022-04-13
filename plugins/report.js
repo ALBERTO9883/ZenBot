@@ -9,7 +9,7 @@ let handler = async(m, { conn, text }) => {
     //conn.sendMessage('50499698072@s.whatsapp.net', teks1, MessageType.text) // añade tu número aqui, pero no quites el otro. Quita las // del inicio de esta línea
     conn.reply(m.chat, '*_✅ El problema se ha informado al propietario del Bot ✅_*\n\n*_Nos pondremos en contacto contigo a la brevedad posible️_*', m)
 }
-handler.help = ['bug <reporte>', 'report <reporte>']
+handler.help = ['bug *<reporte>*', 'report *<reporte>*']
 handler.tags = ['bug']
 handler.command = /^(bug|report|reporte)$/i
 handler.owner = false

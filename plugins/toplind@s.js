@@ -49,6 +49,7 @@ function handler(m, { groupMetadata }) {
     })
 }
 handler.help = ['toplindos']
+handler.tags = ['top']
 handler.command = ['toplindos','toplindas','toplindo','toplinda','toplind@s','toplind@']
 handler.group = true
 

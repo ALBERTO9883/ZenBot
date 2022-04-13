@@ -3,10 +3,11 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
 let os = require('os')
 let { isBanned, welcome, antivirtex, detect, sWelcome, sBye, sPromote, sDemote, antiLink } = global.DATABASE.data.chats[m.chat]
   await conn.send2Button(m.chat, `
-*══〘🍁BIENVENIDA🍁〙══*
+*╭══〘🍁BIENVENIDA🍁〙══╮*
+*┃*
 *┣ ►PORFAVOR ELIJA UNA OPCIÓN* 
 *┣ ►Actualmente está ${welcome ? 'Activado✅' : 'Desactivado❌'}*
-*══ৡৢ͜͡✦══╡🍁╞══ৡৢ͜͡✦══*  
+*╰══ৡৢ͜͡✦══╡🍁╞══ৡৢ͜͡✦══╯*  
 `.trim(), '*©Cᴏᴍᴘᴀɴʏ Zᴇɴ Bᴏᴛ*', '✅Activar✅', `${usedPrefix}enable welcome`, '❕Desactivar❕', `${usedPrefix}disable welcome`)
 }
 handler.help = ['bienvenida']

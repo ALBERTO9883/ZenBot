@@ -5,7 +5,7 @@ let { isBanned, welcome, antivirtex, detect, sWelcome, sBye, sPromote, sDemote, 
   await conn.send2Button(m.chat, `
 *══〘🍁BIENVENIDA🍁〙══*
 *┣ ►PORFAVOR ELIJA UNA OPCIÓN* 
-*┣ ►Actualmente está ${welcome ? 'Activado✅' : 'Desactivado❌'} 
+*┣ ►Actualmente está ${welcome ? 'Activado✅' : 'Desactivado❌'}*
 *══ৡৢ͜͡✦══╡🍁╞══ৡৢ͜͡✦══*  
 `.trim(), '*©Cᴏᴍᴘᴀɴʏ Zᴇɴ Bᴏᴛ*', '✅Activar✅', `${usedPrefix}enable welcome`, '❕Desactivar❕', `${usedPrefix}disable welcome`)
 }

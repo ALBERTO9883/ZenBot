@@ -12,7 +12,7 @@ let handler = async (m, { conn, text, isMods, isOwner }) => {
         m.reply('*[❗] El link de su grupo fue enviado a mi propietario*\n\n*👉🏻 Su grupo será evaluado y quedara a criterio del propietario del Bot si añade o no al Bot a su grupo*\n\n*[❗] Algunas posibles causas que el Bot no se añada:*\n*1.- El Bot se encuentra saturado*\n*2.- El Bot fue sacado recientemente del grupo*\n*3.- Se restableció el link del grupo*\n*4.- El Bot no se agrega a grupos*\n\n*👉🏻 Ten en cuenta que tu solicitud para unir el Bot a tu grupo puede demorar algunas horas en ser respondida*')
     }
 }
-handler.help = ['join [chat.whatsapp.com]']
+handler.help = ['join *<enlace del grupo>*']
 handler.tags = ['premium']
 
 handler.command = /^unete|join|nuevogrupo$/i

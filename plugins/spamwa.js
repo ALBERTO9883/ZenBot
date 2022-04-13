@@ -13,12 +13,12 @@ if (jumlah && isNaN(jumlah)) throw '*[❗] La cantidad debe ser un número!*'
   if (i !== 0) conn.reply(fixedNumber, pesan.trim(), m)
   }
 }
-handler.help = ['spamwa <number>|<mesage>|<no of messages>']
+handler.help = ['spamwa *número|mensaje|cantidad*']
 handler.tags = ['premium']
 handler.command = /^spam(wa)?$/i
 
 handler.group = false
-handler.premium = false
+handler.premium = true
 handler.private = false
 
 module.exports = handler

@@ -4,7 +4,7 @@ let handler = async function (m, { conn }) {
     let name = this.getName(global.owner[0] + '@s.whatsapp.net')
     list.push({
       "displayName": name,
-      "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:;${name};;;\nFN:${name}\nitem1.TEL;waid=${i.split('@')[0]}:${i.split('@')[0]}\nitem1.X-ABLabel:Creador de la loli bot xD\nEND:VCARD`
+      "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:;${name};;;\nFN:${name}\nitem1.TEL;waid=${i.split('@')[0]}:${i.split('@')[0]}\nitem1.X-ABLabel:*Creador de ZenBor*\nEND:VCARD`
     })
   }
   await conn.sendMessage(m.chat, {

@@ -5,7 +5,7 @@ let handler = async (m, { conn, text }) => {
     if (!who) throw `*[ ⚠️ ] Etiquete a una persona!*`
     if (global.prems.includes(who.split`@`[0])) throw 'dia udah premium!'
     global.prems.push(`${who.split`@`[0]}`)
-    conn.reply(m.chat, `@${who.split`@`[0]} Ahora eres premium!`, m, {
+    conn.reply(m.chat, `@${who.split`@`[0]} Ahora eres usuario premium!`, m, {
         contextInfo: {
             mentionedJid: [who]
         }

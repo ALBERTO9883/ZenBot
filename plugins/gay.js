@@ -5,7 +5,7 @@ _*${text}* *es 🏳️‍🌈* *${Math.floor(Math.random() * 200)}%* *${command.
 `.trim(), m, m.mentionedJid ? {
 contextInfo: {
 mentionedJid: m.mentionedJid}} : {})}
-handler.help = ['gay *@user*']
+handler.help = ['gay *@user*', 'lesbi *@user*']
 handler.tags = ['game']
 handler.command = /^(gay|lesbi)/i
 handler.fail = null

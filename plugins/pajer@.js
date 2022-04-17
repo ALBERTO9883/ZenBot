@@ -8,8 +8,8 @@ _*${text}* *es 😏💦* *${Math.floor(Math.random() * 1039193829)}%* *${command
     }
   } : {})
 }
-handler.help = ['gay', 'lesbi'].map(v => 'how' + v + ' siapa?')
-handler.tags = ['kerang']
+handler.help = ['pajero', 'pajera'].map(v => 'how' + v + ' *@user*')
+handler.tags = ['game']
 handler.command = /^(pajero|pajera)/i
 handler.owner = false
 handler.mods = false

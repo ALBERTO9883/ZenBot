@@ -10,7 +10,7 @@ let handler = async (m, { conn }) => {
   conn.sendFile(m.chat, dir[Math.floor(Math.random() * dir.length)], 'dadu.webp', '', m)
 }
 handler.help = ['dado']
-handler.tags = ['sticker', 'fun']
+handler.tags = ['game']
 handler.command = /^dado$/i
 
 module.exports = handler

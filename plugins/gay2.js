@@ -7,5 +7,7 @@ avatar: await conn.getProfilePicture(who).catch(_ => 'https://telegra.ph/file/24
 conn.sendFile(m.chat, vn, 'baneado.mp3', null, m, true, {
 type: 'audioMessage', 
 ptt: true })}
+handler.help = ['2gay *@user*']
+handler.tags = ['game']
 handler.command = /^(2gay)$/i
 module.exports = handler

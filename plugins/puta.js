@@ -5,6 +5,8 @@ _*${text}* *es* *${Math.floor(Math.random() * 2000)}%* *${command.replace('how',
 `.trim(), m, m.mentionedJid ? {
 contextInfo: {
 mentionedJid: m.mentionedJid }} : {})}
+handler.help = ['puta *@user*']
+handler.tags = ['game']
 handler.command = /^(puta)/i
 handler.fail = null
 module.exports = handler

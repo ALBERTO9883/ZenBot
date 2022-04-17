@@ -17,7 +17,7 @@ function handler(m, { groupMetadata }) {
     })
 }
 handler.help = ['formartrio']
-handler.tags = ['General']
+handler.tags = ['game']
 handler.command = ['formartrio','formartrios']
 handler.group = true
 

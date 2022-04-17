@@ -10,6 +10,8 @@ let handler = async (m, { conn, command, text }) => {
     }
   } : {})
 }
+handler.help = ['love *@user*']
+handler.tags = ['game']
 handler.command = /^(love)/i
 handler.owner = false
 handler.mods = false

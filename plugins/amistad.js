@@ -11,6 +11,8 @@ m.reply(`*🔰 Vamos a hacer algunas amistades 🔰*\n\n*Oye ${toM(a)} hablale a
 contextInfo: {
 mentionedJid: [a, b],
 }})}
+handler.help = ['amigorandom']
+handler.tags = ['game']
 handler.command = ['amigo','amigorandom','amistad']
 handler.group = true
 module.exports = handler

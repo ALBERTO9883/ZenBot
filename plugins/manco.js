@@ -5,6 +5,8 @@ _*${text}* *es* *${Math.floor(Math.random() * 500)}%* *${command.replace('how', 
 `.trim(), m, m.mentionedJid ? {
 contextInfo: {
 mentionedJid: m.mentionedJid}} : {})}
+handler.help = ['manco', 'manca']
+handler.tags = ['game']
 handler.command = /^(manco|manca)/i
 handler.fail = null
 module.exports = handler

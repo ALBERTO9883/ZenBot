@@ -83,8 +83,8 @@ ${spins7}|${spins8}|${spins9}
         delete conn.slots[m.chat]
     }
 }
-handler.help = ['slots', 'jackpot']
-handler.tags = ['General']
+handler.help = ['slots']
+handler.tags = ['game']
 handler.command = /^slots?|jac?kpot$/i
 
 module.exports = handler

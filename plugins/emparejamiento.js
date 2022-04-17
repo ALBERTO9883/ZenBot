@@ -14,6 +14,7 @@ function handler(m, { groupMetadata }) {
     })
 }
 handler.help = ['formarpareja']
+handler.tags = ['game']
 handler.command = ['formarpareja','formarparejas']
 handler.group = true
 

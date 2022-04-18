@@ -6,6 +6,8 @@ for (let { url, type } of res)
 conn.sendFile(m.chat, url, 'ig' + (type == 'video' ? '.mp4' : '.jpg'), `
 @${args[0]}
 `.trim(), m)}
+handler.help = ['igstory']
+handler.tags = ['downloader']
 handler.command = /^(igs(tory)?)$/i
 module.exports = handler
 const axios = require('axios')

@@ -9,7 +9,7 @@ m.reply('Scraping....')
    throw '*_Error, ingrese un link de tiktok valido!_*'
    }
     }
-handler.help = ['tiktokaudio', 'ttaudio'].map(v => v + ' <url>')
+handler.help = ['tiktokaudio *URL*']
 handler.tags = ['downloader']
 handler.command = /^(ttaudio|tiktokaudio)$/i
 

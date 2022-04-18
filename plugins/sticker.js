@@ -7,7 +7,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
   let stiker = false
   try {
   	   let fs = require('fs')
- let y = fs.readFileSync('./Menu2.jpg')
+ let y = fs.readFileSync('./src/stickers.jpg')
  
  
   conn.sendMessage(m.chat, `*_🍃AGUARDE UN MOMENTITO :3🍃_*` , 'conversation', {quoted: m, thumbnail: global.thumb, contextInfo:{externalAdReply: {title: '🐢Sᴛɪᴄᴋᴇʀs Bʏ ZᴇɴBᴏᴛ ', body: `Aʟʙᴇʀᴛᴏ Y Asʜʟʏ🌹`, sourceUrl: 'enviando...', thumbnail: y}}})

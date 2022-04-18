@@ -23,6 +23,8 @@ conn.sendFile(m.chat, video, 'twitter.mp4', `
 📍 *Url:* ${args[0]}
 📎 *Link:* ${ress.link}
 `.trim(), m)}
+handler.help = ['twvid']
+handler.tags = ['downloader']
 handler.command = /^twittervideo|twvid|twitter|dltwitter|twitterdl$/i
 module.exports = handler
 const cheerio = require('cheerio')

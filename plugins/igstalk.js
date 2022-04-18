@@ -16,6 +16,8 @@ let iggs = `
 *▢ Bio:* ${json.bio}
 `.trim()
 conn.sendFile(m.chat, json.profilePicHD, 'error.jpg', iggs, m)}
+handler.help = ['igstalk']
+handler.tags = ['downloader']
 handler.command = /^(igstalk)$/i
 module.exports = handler
 async function igstalk(username) {

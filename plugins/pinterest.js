@@ -9,6 +9,8 @@ if (json.result.length == 0) return conn.sendFile(m.chat, './Menu2.jpg', 'error 
 data = await fetch('https://api.imgbb.com/1/upload?key=c93b7d1d3f7a145263d4651c46ba55e4&image='+random).then(v => v.json())
 get = await conn.getFile(data.data.url)
 conn.sendMessage(m.chat, get.data, 'imageMessage', { quoted: m, mimetype: get.mime, caption: data.data.url })}
+handler.help = ['pinterest']
+handler.tags = ['downloader']
 handler.command = /^pinterest$/i
 handler.fail = null
 module.exports = handler

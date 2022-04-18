@@ -29,6 +29,8 @@ conn.sendFile(m.chat, dl_link, title + '.mp3', `
 //  asDocument: chat.useDocument
 })
 }
+handler.help = ['dlaudio *link yt*']
+handler.tags = ['downloader']
 handler.command = /^dlyt|dlaudio|dlytaud|dlaud$/i
 handler.owner = false
 handler.mods = false

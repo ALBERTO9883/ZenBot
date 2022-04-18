@@ -10,8 +10,8 @@ let handler = async (m, { conn, text, command, usedPrefix, watermark }) => {
   if (!url) throw '404 Not Found'
   conn.sendButtonImg(m.chat, await (await fetch(url)).buffer(), `*◅─ 「 Google imagen 」 ─▻*\n*➸「 ${text} 」*`, watermark, 'SIGUIENTE', `.gimage ${text}`, m)
 }
-handler.help = ['gimage <query>', 'image <query>']
-handler.tags = ['internet', 'tools']
+handler.help = ['imagen']
+handler.tags = ['downloader']
 handler.command = /^(gimage|image|imagen)$/i
 
 module.exports = handler

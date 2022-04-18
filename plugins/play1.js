@@ -26,7 +26,8 @@ conn.sendFile(m.chat, dl_link, title + '.mp' + (3 + /2$/.test(command)), `
 *📂Tamaño del archivo:* *${filesizeF}*
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
 `.trim(), m, false, _thumb || {})}
-handler.help = ['play' , 'play2']
+handler.help = ['play *música*' , 'play2 *música*']
+handler.tags = ['downloader']
 handler.command = /^play2?$/i
 handler.group = false
 handler.registrar = false

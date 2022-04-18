@@ -30,5 +30,7 @@ if (!text) throw `*[❗️] Estas usando mal el comando!*\n*Uso correcto:*\n*${u
 wikipedia(`${text}`).then(res => {
 m.reply(`*Aquí tiene la informacion encontrada:*\n\n` + res.result.isi)
 }).catch(() => { m.reply('*[❗️] Información no encontrada, comprueba que lo haya escrito correctamente y que solo sea una palabra*') })}
+handler.help = ['wikipedia *texto a buscar*'] 
+handler.tags = ['downloader']
 handler.command = /^(wiki|wikipedia|internet?)$/i
 module.exports = handler

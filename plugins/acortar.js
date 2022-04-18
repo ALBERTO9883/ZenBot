@@ -8,7 +8,7 @@ let hasil = `*Link acortado correctamente!!*\n\n*Link anterior:*\n${text}\n*Link
           
 m.reply(hasil)
 }
-handler.help = ['tinyurl','short2'].map(v => v + ' <link>')
+handler.help = ['tinyurl','acortar'].map(v => v + ' *link*')
 handler.tags = ['tools']
 handler.command = /^(tinyurl|short2|acortar|corto)$/i
 handler.owner = false

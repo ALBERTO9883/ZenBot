@@ -19,8 +19,8 @@ ${v.videoCount} video
   }).filter(v => v).join('\n========================\n')
   m.reply(teks)
 }
-handler.help = ['', 'earch'].map(v => 'yts' + v + ' <pencarian>')
-handler.tags = ['General']
+handler.help = ['ytsearch']
+handler.tags = ['downloader']
 handler.command = /^yts(earch)?$/i
 
 module.exports = handler

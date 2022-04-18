@@ -25,6 +25,8 @@ let spotifyi = `❒═════❬ SPOTIFY ❭═════╾❒
 await conn.sendFile(m.chat, thumb, '', spotifyi, m)
 await conn.sendFile(m.chat, preview_mp3, 'spotify.mp3', spotifyi, m)
 }
+handler.help = ['spotify']
+handler.tags = ['downloader']
 handler.command = /^(spotify|music)$/i
 
 

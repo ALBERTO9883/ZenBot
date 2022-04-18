@@ -8,7 +8,7 @@ _*${text}* *es 😏💦* *${Math.floor(Math.random() * 1039193829)}%* *${command
     }
   } : {})
 }
-handler.help = ['pajero', 'pajera'].map(v => 'how' + v + ' *@user*')
+handler.help = ['pajero *@user*', 'pajera *@user*']
 handler.tags = ['game']
 handler.command = /^(pajero|pajera)/i
 handler.owner = false

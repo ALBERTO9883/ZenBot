@@ -6,23 +6,23 @@ let handler = async (m, { conn, command, text }) => {
   if (!text) throw '*✳️ Inserte el nombre/título del video o audio a bucar*\n\n*Ejemplo:*\n*#play Juan Solo - Querido Corazón*'
   let results = await yts(text)
    let fs = require('fs')
- let y = fs.readFileSync('./Menu2.jpg')
+ let y = fs.readFileSync('./src/reproductor.jpg')
  
  
-  conn.sendMessage(m.chat, `*Aguarde un momento` , 'conversation', {quoted: m, thumbnail: global.thumb, contextInfo:{externalAdReply: {title: 'Simple WhatsAppp Bot', body: `© ${conn.user.name}`, sourceUrl: 'enviando...', thumbnail: y}}})
+  conn.sendMessage(m.chat, `*_🍃AGUARDE UN MOMENTITO :3🍃_*` , 'conversation', {quoted: m, thumbnail: global.thumb, contextInfo:{externalAdReply: {title: '🐢Rᴇᴘʀᴏᴅᴜᴄᴛᴏʀ Bʏ ZᴇɴBᴏᴛ', body: `Aʟʙᴇʀᴛᴏ Y Asʜʟʏ🌹`, sourceUrl: 'enviando...', thumbnail: y}}})
   let vid = results.all.find(video => video.seconds < 3600)
   if (!vid) throw '*Video/Audio No encontrado* '
   let isVideo = /2$/.test(command)
   let { dl_link, thumb, title, filesize, filesizeF} = await (isVideo ? ytv : yta)(vid.url, 'id4')
   //let isLimit = (isPrems || isOwner ? 99 : limit) * 1024 < filesizesLimit
   conn.sendFile(m.chat, thumb, 'thumbnail.jpg', `
-*⏯ ️Reproductor By Zen-Bot ⏯️*
-
-*${title}*
-*⇄ㅤ     ◁   ㅤ  ❚❚ㅤ     ▷ㅤ     ↻*
-
-*📂Tamaño del archivo:* ${filesizeF}
-*👉🏻Aguarde un momento en lo que envío su audio/video*
+*▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬*
+*🍁Título: ${title}*
+*⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯*
+*📂Tamaño del archivo: ${filesizeF}*
+*⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯*
+*🪴 _AGUARDE UN MOMENTO_🪴*
+*▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬*
 `.trim(), m)
   let _thumb = {}
   try { if (isVideo) _thumb = { thumbnail: await (await fetch(thumb)).buffer() } }

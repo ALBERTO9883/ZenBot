@@ -14,14 +14,16 @@ let y = fs.readFileSync('./Menu2.jpg')
 let _thumb = {}
   try { _thumb = { thumbnail: await (await fetch(thumb)).buffer() } }
   catch (e) { }
-  conn.sendMessage(m.chat, `*⏯ ️Descargador By ShadowBot ⏯️*\n\n*🔥Titulo:* ${title}\n*📂Tamaño del archivo:* ${filesizeF}` , 'conversation', {quoted: m, thumbnail: y, contextInfo:{externalAdReply: {title: 'Simple WhatsApp bot', body: `© ${conn.user.name}`, sourceUrl: 'enviando...', thumbnail: y}}})
+  conn.sendMessage(m.chat, `*⏯ ️Descargador By ZenBot ⏯️*\n\n*🔥Titulo:* ${title}\n*📂Tamaño del archivo:* ${filesizeF}` , 'conversation', {quoted: m, thumbnail: y, contextInfo:{externalAdReply: {title: 'Simple WhatsApp bot', body: `© ${conn.user.name}`, sourceUrl: 'enviando...', thumbnail: y}}})
  conn.sendFile(m.chat, dl_link, `By ${conn.user.name}.mp4`, `
  *${title}*
- *©The Shadow Brokers - Bot*
+ *©Company ZenBot*
 `.trim(), m, false, {
   
 ptt: false, duration: 999999999999, thumbnail: y , asDocument: chat.useDocument})
 }
+handler.help = ['ytmp4']
+handler.tags = ['downloader']
 handler.command = /^yt(v|mp4)?$/i
 handler.owner = false
 handler.mods = false

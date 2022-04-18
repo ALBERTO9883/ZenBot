@@ -4,5 +4,7 @@ if (!text) throw `*Formato de uso: ${usedPrefix + command} Nombre de la canción
 let res = await fetch("https://api-alc.herokuapp.com/api/download/play-mp4?query="+text+"&apikey=ConfuMods")
 let json = await res.json()
 conn.sendFile(m.chat, json.link, 'error.mp4', `   *Aqui tienes el video :D*\n_The ZenBot_`, m)}
+handler.help = ['play4 *música*']
+handler.tags = ['downloader']
 handler.command = /^(play4)$/i
 module.exports = handler

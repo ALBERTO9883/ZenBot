@@ -7,7 +7,7 @@ let handler = async(m, { conn }) => {
   conn.sendFile(m.chat, json.url, '', '*A~Ara Ara Sempai*', m)
 }
 handler.help = ['waifu']
-handler.tags = ['General']
+handler.tags = ['images']
 handler.command = /^(waifu)$/i
 
 module.exports = handler

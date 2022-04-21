@@ -17,7 +17,7 @@ let stiker = await sticker(null, url, 'Slap', '*©Cᴏᴍᴘᴀɴʏ Zᴇɴ-O-B�
   }
 }
 handler.help = ['slap']
-handler.tags = ['General']
+handler.tags = ['images']
 handler.command = /^slap/i
 
 module.exports = handler

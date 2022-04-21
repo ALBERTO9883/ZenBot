@@ -21,8 +21,8 @@ await conn.sendFile(m.chat, uh,'p.jpg', '*“En lugar de conversaciones enérgic
     
   }
 
-handler.help = ['blackpink [theme] [teksnya]']
-handler.tags = ['ep']
+handler.help = ['lblackpink']
+handler.tags = ['images']
 handler.command = /^lblackpink$/i
 handler.group = false
 handler.private = false

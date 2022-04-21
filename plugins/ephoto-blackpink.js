@@ -12,7 +12,7 @@ let uuid = {
 }[Pilihan]
 if (!uuid) throw `*Tipo incorrecto*\n\n*Tipos disponibles:*\ntype1\ntype2\n\n*Ejemplo:*\n*#lblackpink type1 ZenBot*`
 let [teks1, ...teks2] = text.replace(Pilihan,'').trimStart().split('|')
-if(!teks1) throw '*Ingrese un texto*\n\n*Ejemplo:*\n*#lblackpink type1 Shadow*'
+if(!teks1) throw '*Ingrese un texto*\n\n*Ejemplo:*\n*#lblackpink type1 ZenBot*'
 if(teks1.length > 20) throw `*Uhm.. texto demasiado largo, ingrese un texto menor a 20 caracteres*\n\n*Ejemplo:*\n${usedPrefix+command} type1 ZenBot*`
 teks2 = teks2.join('|')
   let result = await ephoto3(uuid, `${teks1}`)
@@ -22,7 +22,7 @@ await conn.sendFile(m.chat, uh,'p.jpg', '*“En lugar de conversaciones enérgic
   }
 
 handler.help = ['lblackpink']
-handler.tags = ['images']
+handler.tags = ['logo']
 handler.command = /^lblackpink$/i
 handler.group = false
 handler.private = false

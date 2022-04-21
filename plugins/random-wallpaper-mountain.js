@@ -4,5 +4,7 @@ let fetch = require('node-fetch')
     json = await heum.buffer()
    conn.sendButtonImg(m.chat, json, '🏔⛰🗻', '*©Cᴏᴍᴘᴀɴʏ Zᴇɴ Bᴏᴛ*', 'SIGUIENTE', `${usedPrefix + command}`, m, false)
 }
+handler.help = ['wpmontaña']
+handler.tags = ['images']
 handler.command = /^(wpmontaña|fondomontaña|Wpmontaña|Fondomontaña|wpmountain|fondomountain)$/i
 module.exports = handler

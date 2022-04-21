@@ -17,7 +17,7 @@ let stiker = await sticker(null, url, 'Nyan', '*©Cᴏᴍᴘᴀɴʏ Zᴇɴ-O-B�
   }
 }
 handler.help = ['nyan']
-handler.tags = ['expression']
+handler.tags = ['images']
 handler.command = /^nyan/i
 
 module.exports = handler

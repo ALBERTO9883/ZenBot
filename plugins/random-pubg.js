@@ -4,5 +4,7 @@ let fetch = require('node-fetch')
     json = await heum.buffer()
    conn.sendButtonImg(m.chat, json, '*🔫 Un juego increíble!!*', '*©Cᴏᴍᴘᴀɴʏ Zᴇɴ Bᴏᴛ*', 'SIGUIENTE', `${usedPrefix + command}`, m, false)
 }
+handler.help = ['pubg']
+handler.tags = ['images']
 handler.command = /^(pubg|Pubg|pugb)$/i
 module.exports = handler

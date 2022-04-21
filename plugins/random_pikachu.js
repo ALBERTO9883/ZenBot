@@ -17,7 +17,7 @@ let handler  = async (m, { conn, text }) => {
 }
 
 handler.help = ['pikachu']
-handler.tags = ['random']
+handler.tags = ['images']
 handler.command = /^pikachu$/i
 
 handler.fail = null

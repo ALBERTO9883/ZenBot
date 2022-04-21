@@ -21,8 +21,8 @@ let handler = async(m, { conn, args, usedPrefix }) => {
 
 }
 
-handler.help = ['anime <query>']
-handler.tags = ['anime']
+handler.help = ['anime *random/waifu/husbu/neko*']
+handler.tags = ['images']
 handler.command = /^(anime)$/i
 
 handler.fail = null

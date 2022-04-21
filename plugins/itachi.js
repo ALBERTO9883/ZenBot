@@ -4,6 +4,8 @@ let fetch = require('node-fetch')
     json = await heum.buffer()
    conn.sendButtonImg(m.chat, json, '*Incluso el más fuerte de los oponentes tiene siempre una debilidad*', '*©Cᴏᴍᴘᴀɴʏ Zᴇɴ-O-Bᴏᴛ*', 'SIGUIENTE', `${usedPrefix + command}`, m, false)
 }
+handler.help = ['itachi']
+handler.tags = ['images']
 handler.command = /^(itachi)$/i
 
 module.exports = handler

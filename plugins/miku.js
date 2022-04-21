@@ -4,6 +4,8 @@ let fetch = require('node-fetch')
     json = await heum.buffer()
    conn.sendButtonImg(m.chat, json, '*Hatsune Miku*', '*©Cᴏᴍᴘᴀɴʏ Zᴇɴ-O-Bᴏᴛ*', 'SIGUIENTE', `${usedPrefix + command}`, m, false)
 }
+handler.help = ['miku']
+handler.tags = ['images']
 handler.command = /^(micu|miku)$/i
 
 module.exports = handler

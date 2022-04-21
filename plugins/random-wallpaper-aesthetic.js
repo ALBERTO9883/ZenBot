@@ -4,5 +4,7 @@ let fetch = require('node-fetch')
     json = await heum.buffer()
    conn.sendButtonImg(m.chat, json, '✨ *Aquí está tú fondo aesthetic!!*', '*©Cᴏᴍᴘᴀɴʏ Zᴇɴ Bᴏᴛ*', 'SIGUIENTE', `${usedPrefix + command}`, m, false)
 }
+handler.help = ['wpaesthetic']
+handler.tags = ['images']
 handler.command = /^(wpaesthetic|fondoaesthetic|wallpaperaesthetic|aestheticfondo|aestheticwallpaper)$/i
 module.exports = handler

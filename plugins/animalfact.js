@@ -28,8 +28,8 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
   if (json.image) await conn.sendFile(m.chat, json.image, "", `${json.fact}\n\n~The Zen-O-Bot`, m);
   else throw json;
 };
-handler.help = ["animal"].map((v) => v + " <hewan>");
-handler.tags = ["internet"];
+handler.help = ['animal']
+handler.tags = ['images'];
 handler.command = /^(animal|animalfact)$/i;
 
 module.exports = handler;

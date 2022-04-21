@@ -13,7 +13,7 @@ let handler = async (m, { conn }) => {
   await conn.sendFile(m.chat, json.result.female, '', '*✅ Chica*', m)
 }
 handler.help = ['par']
-handler.tags = ['internet']
+handler.tags = ['images']
 handler.command = /^(par)$/i
 
 module.exports = handler

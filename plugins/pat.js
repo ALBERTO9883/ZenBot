@@ -8,5 +8,7 @@ let json = await res.json()
 if (!json.url) throw 'Error!'
 conn.sendFile(m.chat,json.url,'h.gif',`@${m.sender.split('@')[0]} le dio palmaditas a ${m.mentionedJid.map((user)=>(user === m.sender)? 'alguien ': `@${user.split('@')[0]}`).join(', ')}`,m,false,
 {  contextInfo :{mentionedJid : [  ...m.mentionedJid,m.sender ] }})}
+handler.help = ['pat']
+handler.tags = ['images']
 handler.command = /^pat$/i
 module.exports = handler

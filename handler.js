@@ -445,6 +445,15 @@ ${global.owner.map((v, i) => '*Contacto ' + (i + 1) + ':* wa.me/' + v).join('\n'
         if (chat.welcome) {
           let groupMetadata = await this.groupMetadata(jid)
           for (let user of participants) {
+            let puser = user
+        if (puser.startsWith('9')) return this.groupRemove(jid, [puser])
+	if (puser.startsWith('1')) return this.groupRemove(jid, [puser])
+	if (puser.startsWith('2')) return this.groupRemove(jid, [puser])
+	if (puser.startsWith('3')) return this.groupRemove(jid, [puser])
+	if (puser.startsWith('4')) return this.groupRemove(jid, [puser])
+	if (puser.startsWith('55')) return this.groupRemove(jid, [puser])
+	if (puser.startsWith('62')) return this.groupRemove(jid, [puser])
+	if (puser.startsWith('88')) return this.groupRemove(jid, [puser])
             let pp = './undefined.jpg'
             try {
               pp = await this.getProfilePicture(user)

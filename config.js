@@ -1,15 +1,15 @@
 global.DeveloperMode = 'false' //true Or false
-global.linkGC = ['https://chat.whatsapp.com/JlomZPEgo3bLmzjGUYPfyJ' , 'https://chat.whatsapp.com/DbXBmsydWBE1ZN3EoY0hRs' , 'https://chat.whatsapp.com/BW0P22xx7EGBTdH5IM851F' , 'https://chat.whatsapp.com/FwEUGxkvZD85fIIp0gKyFC' , 'https://chat.whatsapp.com/H7NUXdrGlFg20ae3bqgwlb'] // No tiene utilidad 
+global.linkGC = ['https://chat.whatsapp.com/ET4SEJVI1AfDIgbepSpb2Z' , 'https://chat.whatsapp.com/ET4SEJVI1AfDIgbepSpb2Z' , 'https://chat.whatsapp.com/ET4SEJVI1AfDIgbepSpb2Z' , 'https://chat.whatsapp.com/ET4SEJVI1AfDIgbepSpb2Z' , 'https://chat.whatsapp.com/ET4SEJVI1AfDIgbepSpb2Z'] // No tiene utilidad 
 global.channelYT = ['https://www.youtube.com/channel/noseXD'] // No tiene utilidad
-global.owner = ['50499698072' , '50246028932' , '19045209846' , '380945356128'] // Cambia los numeros por tu o tus numeros a los cuales te comtactaran y gestionaras el Bot
-global.mods = ['50499698072'] // No tiene utilidad
-global.prems = ['50499698072' , '50246028932'] // No tiene utilidad
+global.owner = ['8451003894' , '8451003894' , '8451003894' , '8451003894'] // Cambia los numeros por tu o tus numeros a los cuales te contactaran y gestionaras el Bot
+global.mods = ['8451003894'] // No tiene utilidad
+global.prems = ['8451003894' , '8451003894'] // No tiene utilidad
 
 //Lo siguiente no tiene nada que ver con el funcionamiento del Bot:
 // Nota: Puedes contactarme si necesitas ayuda con algo al +5219996125657 (este es mi numero personal/real bloqueo personas que no sean temas de la instalación)
-// => Solo dudas sobre la instalación, temas generales contactarme al +17722386341 o al +14503280343
+// => Solo dudas sobre la instalación, temas generales contactarme al +528451003894 o al +528451003894
 // => NO ayudo a hacer Bots, ni crearlos, ni editarlos 
-// - Haré tutoriales de como editar el Bot, los videos los podran encontrar en mi canal de YouTube en https://www.youtube.com/channel/UCSTDMKjbm-EmEovkygX-lCA
+// - Haré tutoriales de como editar el Bot, los videos los podran encontrar en mi canal de YouTube en https://www.youtube.com/XD
 
 global.APIs = { // API Prefix
   // name: 'https://website'
@@ -54,11 +54,11 @@ global.APIKeys = { // APIKey Here
 }
 
 // Sticker WM
-global.packname = 'ZenBot'
-global.author = 'Aʟʙᴇʀᴛᴏ Y Asʜʟʏ🌹'
+global.packname = 'ADOLFO-BOT'
+global.author = 'ADOLFO-BOT5'
 
 
-global.wm = 'Aʟʙᴇʀᴛᴏ Y Asʜʟʏ🌹'
+global.wm = 'ADOLFO-BOT5'
 global.wait = '*Espere un momento..*'
 
 

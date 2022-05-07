@@ -1,6 +1,7 @@
 let util = require('util')
 let simple = require('./lib/simple')
 let { MessageType } = require('@adiwajshing/baileys')
+let fetch = require('node-fetch')
 
 const isNumber = x => typeof x === 'number' && !isNaN(x)
 const delay = ms => isNumber(ms) && new Promise(resolve => setTimeout(resolve, ms))
@@ -441,41 +442,74 @@ ${global.owner.map((v, i) => '*Contacto ' + (i + 1) + ':* wa.me/' + v).join('\n'
     let text = ''
     switch (action) {
       case 'add':
-      case 'remove':
-        if (chat.welcome) {
-          let groupMetadata = await this.groupMetadata(jid)
-          for (let user of participants) {
-            let puser = user
+        for (let user of participants) {
+        let puser = user
+        if (puser.startsWith(conn.user.jid)) return false
         if (puser.startsWith('9')) return this.groupRemove(jid, [puser])
 	if (puser.startsWith('1')) return this.groupRemove(jid, [puser])
 	if (puser.startsWith('2')) return this.groupRemove(jid, [puser])
 	if (puser.startsWith('3')) return this.groupRemove(jid, [puser])
 	if (puser.startsWith('4')) return this.groupRemove(jid, [puser])
+        if (puser.startsWith('7')) return this.groupRemove(jid, [puser])
 	if (puser.startsWith('55')) return this.groupRemove(jid, [puser])
 	if (puser.startsWith('62')) return this.groupRemove(jid, [puser])
 	if (puser.startsWith('88')) return this.groupRemove(jid, [puser])
-            let pp = './undefined.jpg'
-            try {
-              pp = await this.getProfilePicture(user)
-            } catch (e) {
-            } finally {
-              text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'welcome, @user!').replace('@subject', await this.getName(jid)).replace('@desc', groupMetadata.desc) :
-                (chat.sBye || this.bye || conn.bye || 'bye, @user!')).replace('@user', '@' + user.split('@')[0])
-              this.sendFile(jid, pp, 'pp.jpg', text, null, false, {
-                contextInfo: {
-                  mentionedJid: [user]
-                }
-              })
-            }
-          }
+        if (!chat.welcome) return 
+        let duser = user
+        let groupMetadata = await this.groupMetadata(jid)
+        let _biot = await this.getStatus(duser)
+        let bio = _biot.status == 401 ? 'Sin info' : _biot.status
+        let d = new Date(new Date + 3600000)
+        let date = d.toLocaleDateString('es', { day: 'numeric', month: 'long', year: 'numeric' })
+        let time = d.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true })
+        let botimg = fs.readFileSync('./storage/image/Nyantaco.png')
+        try {
+            userimg = await this.getProfilePicture(duser)
+        } catch {
+            userimg = await this.getProfilePicture("50499698072-1604073088@g.us")
+        }
+        let ppuser = await(await fetch(userimg)).buffer()
+        let _text = 'Bienvenido\'a al grupo *@subject*\n\n*• Nombre:* @user\n*• Bio:* @bio\n*• Fecha:* @date\n*• Hora:* @time\n\n- *recuerda leer las reglas del grupo* -'
+        let text = (chat.sWelcome || this.welcome || conn.welcome || _text).replace('@user', '@' + duser.split('@')[0]).replace('@subject', await this.getName(jid)).replace('@desc', groupMetadata.desc).replace('@bio', bio).replace('@date', date).replace('@time', time) 
+        let __button = await this.prepareMessage(jid, ppuser, MessageType.image, { contextInfo: { externalAdReply: {title: "ғᴀᴍɪʟʏ ᴢᴇɴʙᴏᴛ", body:"", previewType:"PHOTO",thumbnail: botimg, sourceUrl:`https://chat.whatsapp.com/BFZmiXF9GBJH5lM9moCpP1`}} })
+        let _button = [{ buttonId: '.funtion gracias', buttonText: { displayText: 'Gracias 💖' }, type: 1 }, { buttonId: '.funtion descripción', buttonText: { displayText: 'Descripción ☕' }, type: 1 }]
+        let button = { imageMessage: __button.message.imageMessage, contentText: text, footerText: '©ᴢᴇɴ-ᴏ-ʙᴏᴛ', buttons: _button, headerType: 4 }
+        this.sendMessage(jid, button, MessageType.buttonsMessage, { contextInfo: { mentionedJid: [duser] } })
+        }
+      break
+
+      case 'remove':
+      for (let user of participants) {
+        if (!chat.welcome) return 
+        let duser = user
+        let groupMetadata = await this.groupMetadata(jid)
+        let _biot = await this.getStatus(duser)
+        let bio = _biot.status == 401 ? 'Sin info' : _biot.status
+        let d = new Date(new Date + 3600000)
+        let date = d.toLocaleDateString('es', { day: 'numeric', month: 'long', year: 'numeric' })
+        let time = d.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true })
+        let botimg = fs.readFileSync('./storage/image/Nyantaco.png')
+        try {
+            userimg = await this.getProfilePicture(duser)
+        } catch {
+            userimg = await this.getProfilePicture("50499698072-1604073088@g.us")
+        }
+        let ppuser = await(await fetch(userimg)).buffer()
+        let _text = 'Un participante salió del grupo *@subject*\n\n*• Nombre:* @user\n*• Bio:* @bio\n*• Fecha:* @date\n*• Hora:* @time\n\n- *espero que te atropelle un avión xd* -'
+        let text = (chat.sBye || this.bye || conn.bye || _text).replace('@user', '@' + duser.split('@')[0]).replace('@subject', await this.getName(jid)).replace('@desc', groupMetadata.desc).replace('@bio', bio).replace('@date', date).replace('@time', time) 
+        let __button = await this.prepareMessage(jid, ppuser, MessageType.image, { contextInfo: { externalAdReply: {title: "ғᴀᴍɪʟʏ ᴢᴇɴʙᴏᴛ", body:"", previewType:"PHOTO",thumbnail: botimg, sourceUrl:`https://chat.whatsapp.com/BFZmiXF9GBJH5lM9moCpP1`}} })
+        let _button = [{ buttonId: 'adios', buttonText: { displayText: 'Adios 👋' }, type: 1 }]
+        let button = { imageMessage: __button.message.imageMessage, contentText: text, footerText: '©ᴢᴇɴ-ᴏ-ʙᴏᴛ', buttons: _button, headerType: 4 }
+        this.sendMessage(jid, button, MessageType.buttonsMessage, { contextInfo: { mentionedJid: [duser] } })
         }
         break
+
       case 'promote':
-        text = (chat.sPromote || this.spromote || conn.spromote || '@user ```ahora es administrador```')
+      text = (chat.sPromote || this.spromote || conn.spromote || '@user ahora es administrador')
       case 'demote':
-        if (!text) text = (chat.sDemote || this.sdemote || conn.sdemote || '@user ```ya no es administrador```')
+        if (!text) text = (chat.sDemote || this.sdemote || conn.sdemote || '@user ya no es administrador')
         text = text.replace('@user', '@' + participants[0].split('@')[0])
-        if (chat.detect) this.sendMessage(jid, text, MessageType.extendedText, {
+        this.sendMessage(jid, text, MessageType.extendedText, {
           contextInfo: {
             mentionedJid: this.parseMention(text)
           }
@@ -487,19 +521,22 @@ ${global.owner.map((v, i) => '*Contacto ' + (i + 1) + ':* wa.me/' + v).join('\n'
     if (m.key.remoteJid == 'status@broadcast') return
     if (m.key.fromMe) return
     let chat = global.DATABASE._data.chats[m.key.remoteJid]
-    if (chat.delete) return
-    await this.reply(m.key.remoteJid, `
-━━━━⬣  𝘼𝙉𝙏𝙄 𝘿𝙀𝙇𝙀𝙏𝙀  ⬣━━━━
-*▢ Nombre:* @${m.participant.split`@`[0]}
-*▢ Enviando el mensaje..*
-*▢ Para desactivar esta función envie el comando:* #disable delete
-━━━━⬣  𝘼𝙉𝙏𝙄 𝘿𝙀𝙇𝙀𝙏𝙀  ⬣━━━━
-`.trim(), m.message, {
-      contextInfo: {
-        mentionedJid: [m.participant]
-      }
-    })
-    this.copyNForward(m.key.remoteJid, m.message).catch(e => console.log(e, m))
+    if (!chat.delete) return
+    let d = new Date(new Date + 3600000)
+    let date = d.toLocaleDateString('es', { day: 'numeric', month: 'long', year: 'numeric' })
+    let time = d.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true })
+    let very = fs.readFileSync('./storage/image/Nyantaco.png')
+    let deltext = `\t\t\t\t*∙ ♻️ Mensɑje eliminɑdo ♻️ ∙*
+ 
+*• Usuario:* @${m.participant.split`@`[0]}
+*• Fechɑ:* ${date}
+*• Horɑ:* ${time}
+
+
+*El ɑntidelete estɑ ɑctivo*
+Pɑrɑ evitɑr que los mensɑjes seɑn eliminɑdos`
+await this.reply(m.key.remoteJid, deltext, m.message, { quoted: m, contextInfo: { externalAdReply: { title: '🎋 ᴢᴇɴʙᴏᴛ sᴜᴘᴘᴏʀᴛ 🎋', body: '➤ Antidelete By Gatito', previewType:"PHOTO", thumbnail: very, sourceUrl: `` }, mentionedJid: [m.participant] } })
+this.copyNForward(m.key.remoteJid, m.message, false, { quoted: m }).catch(e => console.log(e, m))
   },
   async onCall(json) {
     let { from } = json[2][0][1]

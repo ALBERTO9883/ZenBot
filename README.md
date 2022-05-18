@@ -1,6 +1,6 @@
-# ***🔥𝗧𝗵𝗲 Zen-O-Bot🔥***
+# ***🔥𝗧𝗵𝗲 Aux-Bot🔥***
 ### `Si necesitas ayuda mandame mensaje :^`
-<a href="http://wa.me/50499698072" target="blank"><img src="https://img.shields.io/badge/Whatsapp-30302f?style=flat&logo=whatsapp" /></a>
+<a href="http://wa.me/50246028932" target="blank"><img src="https://img.shields.io/badge/Whatsapp-30302f?style=flat&logo=whatsapp" /></a>
 ### `Unete a los grupos oficales para conocer novedades del Bot`
 [![Grupo de WhatsApp](https://img.shields.io/badge/WhatsApp%20Group-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/HAbftur7mSX1d0A9jHL1Pq)
 [![Grupo de WhatsApp](https://img.shields.io/badge/WhatsApp%20Group-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/LryjgOvojxkF23yROg5Iq8)
@@ -47,15 +47,12 @@ de esa cantidad el Bot empieza a ir
 excesivamente lento (depende del WhatsApp igual)
 ```
 ## `EDITOR Y PROPIETARIO DEL BOT` 
-ALBERTO ![preview](https://user-images.githubusercontent.com/100887441/156953527-740d110d-3ee5-41e5-9899-fd4d4b248d43.gif)
+SinNombre999 ![preview](https://user-images.githubusercontent.com/100887441/156953527-740d110d-3ee5-41e5-9899-fd4d4b248d43.gif)
 
 ```bash
-`The Zen-O-Bot ___ By Alberto Acosta` 
+`Auz-Bot ___ By Sin Nombre` 
 ```
 ### `MODERADORES`
 Estos Son los Sub Creadores del bot
 ```bash
->LIL FABI KPO
->MAKEY
->PABLITO TENIA UN PELITO
->VALDILLO
+>ALBERTO

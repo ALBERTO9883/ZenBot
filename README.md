@@ -1,4 +1,4 @@
-# ***🔥𝗧𝗵𝗲 Aux-Bot🔥***
+# ***🔥Aux-Bot🔥***
 ### `Si necesitas ayuda mandame mensaje :^`
 <a href="http://wa.me/50246028932" target="blank"><img src="https://img.shields.io/badge/Whatsapp-30302f?style=flat&logo=whatsapp" /></a>
 ### `Unete a los grupos oficales para conocer novedades del Bot`
@@ -50,7 +50,7 @@ excesivamente lento (depende del WhatsApp igual)
 SinNombre999 ![preview](https://user-images.githubusercontent.com/100887441/156953527-740d110d-3ee5-41e5-9899-fd4d4b248d43.gif)
 
 ```bash
-`Auz-Bot ___ By Sin Nombre` 
+`Aux-Bot ___ By Sin Nombre` 
 ```
 ### `MODERADORES`
 Estos Son los Sub Creadores del bot

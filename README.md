@@ -15,7 +15,7 @@
 > apt install nodejs -y
 > apt install ffmpeg -y
 > apt install imagemagick -y
-> git clone https://github.com/ALBERTO9883/ZenBot
+> git clone https://github.com/SinNombre999/Aux-Bot
 > cd ZenBot
 > npm install
 > npm install -g npm@8.5.3
